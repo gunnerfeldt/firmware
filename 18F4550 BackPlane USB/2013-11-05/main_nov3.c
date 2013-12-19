@@ -145,70 +145,99 @@
 #pragma udata
 #pragma udata USB_VARS
 
-// ************************************************************************************************
-// New Structs:
-// ************************************************************************************************
 
-typedef union {							// USB_OUT_BUF - Host to Device data struct
-	struct {							// 
-		struct {						// CMD - Command struct
-			unsigned CMD_GROUP:4;		// Commands belongs to different groups
-			unsigned CMD:4;				// Command
-		};								// CMD ?
+/*******************************************************************************************************
+*
+* 	Host -> Device. 64 bytes USB buffer Struct 'USB_BUF'
+*
+* 	Struct 'PROP' - Misc bits
+* 	ID 			= 2 bits 	= Quarter frame counter
+*	MTC_ERR		= 1 bit		= Error Flag
+*	MTC_FPS		= 2 bits	= FPS rate. 0=24, 25, 30D, 30ND
+*	CMD			= 3 bits	= Command bits
+*
+* 	MTC 		= 4 bytes 	= Timecode value. Frame resolution.
+*	FLAG		= 3 bytes	= Channel flags for the data. (see note)
+*	DATA		= 48 bytes	= Data. 2 bytes for each channel. Only relevant data
+*
+*	MF DATA		= 8 bytes	= 4 channels per packet
+*
+*	When the data reached it's destination it's used like this. 
+*	Similar structure for VCA and motorfaders.
+*
+*	struct 'DATA' - 2 bytes per channel
+*	VCA			= 10 bits	= CV for VCA or the motorfaders
+*	STATUS		= 2 bits	= Fader status. Manual, Auto, Touch & Write. Latched values.
+*	MOTOR_ON	= 1 bit		= Only used for motor faders. Bypassing motors from software.
+*	EVENT		= 1 bit		= Was used to tell a new value was sent. Maybe not used anymore.
+*	NOT_USED	= 1 bit
+*	MUTE		= 1 bit		= Mute. For both motorfaders and VCA cards, latching 1 = mute. 0 = open.
+*
+********************************************************************************************************/
 
-		struct {						// MTC_PROP	- MTC Properties struct
-			unsigned ID:2;				// Quarter frame ID.
-			unsigned FPS:2;				// Frames pper Second ID
-			unsigned :4;				//
-			unsigned long int POS;		// 32 bit integer with time code position
-		}MTC_PROP;
-										// Free bytes	
-		unsigned char FREE_BYTE;		// Not used yet
+typedef struct {
+	unsigned char BYTES[64];
+}USB_BUF;
 
-		struct {						// SSL_PROP - SSL Properties struct
-			unsigned BANK_ID:4;			// Current SSL 8 channel bank in focus
-			unsigned BANK_ID_CHANGE:1;	// Flag for change of bank
-			unsigned :3;				
-		}SSL_PROP;
+/*******************************************************************************************************
+* 	Device -> Host. 64 bytes USB buffer Union 'USB_IN_BUF'
+*
+* 	Struct 'PROP' - Misc bits
+* 	ID			= 2 bits 	= Quarter frame counter
+*	NOT_USED	= 3 bit	
+*	CMD			= 3 bits	= Command bits
+*
+* 	MTC 		= 4 bytes 	= Timecode value. Frame resolution. Not used. Yet.
+*	FLAG		= 3 bytes	= Channel flags for the data. (see note)
+*	DATA		= 48 bytes	= Data. 2 bytes for each channel. Only relevant data
+*
+*	MF DATA		= 8 bytes	= 4 channels per packet
+*
+*	How the data is packed from VCA cards & motor fader card. 
+*	Similar structure for VCA and motorfaders.
+*
+*	struct 'DATA' - 2 bytes per channel
+*	VCA			= 10 bits	= CV for VCA or the motorfaders
+*	STATUS		= 2 bits	= Status switches momentary. Idle, Auto, Touch & Write buttons.
+*							  For the SSL channels just the first bit is used. Only one button there.
+*	TOUCH_SENSE	= 1 bit		= Only used for motor faders. Fader knob touch sensor.
+*	EVENT		= 1 bit		= Was used to tell a new value was sent. Maybe not used anymore.
+*	NOT_USED	= 1 bit
+*	MUTE		= 1 bit		= Mute. Latched value from SSL. Momentary from motorfaders.
+*
+********************************************************************************************************/
 
-		unsigned char SSL_DATA[48];		// 2 bytes data for each channel. 24 channels in one packet
-		unsigned char MF_DATA[8];		// 2 bytes data ffor each channel. 4 channels in one packet
-		
+
+/*******************************************************************************************************
+*
+*	note: FLAG
+*	3 bytes holding an array of 24 flags representing channels on the SSL.
+*	An idea for optimizing data flow. Let me explain:
+*	If channel '1' on the SSL is sending data it will FLAG bit 0 in the array. And
+*	only fill the first two bytes with data. 
+*	So my encoder/decoder scan thru the bits and shuffle the data accordingly.
+*	Maybe overkill but ...
+*
+********************************************************************************************************/
+
+
+
+
+typedef union {
+	struct {
+		struct {
+			unsigned ID:2;
+			unsigned MTC_ERR:1;
+			unsigned MTC_FPS:2;
+			unsigned CMD:3;
+		}PROP;
+		unsigned long int MTC;
+		unsigned char FLAG[3];
+		unsigned char DATA[48];
 	};
-	unsigned char BYTES[64];			// 64 bytes raw data
-}USB_OUT_BUF;
-
-
-// ************************************************************************************************
-typedef union {							// USB_IN_BUF - Device to Host data struct
-	struct {							// 
-		struct {						// CMD - Command struct
-			unsigned CMD_GROUP:4;		// Commands belongs to different groups
-			unsigned CMD:4;				// Command
-		};								// CMD ?
-
-		struct {						// MTC_PROP	- MTC Properties struct
-			unsigned ID:2;				// Quarter frame ID.
-			unsigned FPS:2;				// Frames per Second ID
-			unsigned RUN:1;				// RUN event flag
-			unsigned STOP:1;			// STOP event flag
-			unsigned JUMP:1;			// JUMP event flag
-			unsigned :1;				// 
-			unsigned long int POS;		// 32 bit integer with time code position
-		}MTC_PROP;
-
-		struct {						// Free bytes	
-		unsigned char FREE_BYTES[2];	// Not used yet
-		}FREE;
-
-		unsigned char SSL_DATA[48];		// 2 bytes data for each channel. 24 channels in one packet
-		unsigned char MF_DATA[8];		// 2 bytes data for each channel. 4 channels in one packet
-		
-	};
-	unsigned char BYTES[64];			// 64 bytes raw data
+	unsigned char BYTES[64];
 }USB_IN_BUF;
 
-// ************************************************************************************************
 
 struct {
 	USB_IN_BUF SLOT[4];
@@ -216,10 +245,9 @@ struct {
 
 
 struct {
-	USB_OUT_BUF SLOT[4];
+	USB_BUF SLOT[4];
 }usb_out;
-
-USB_BUF TEMP_BUF;
+	USB_BUF TEMP_BUF;
 
 #pragma udata
 

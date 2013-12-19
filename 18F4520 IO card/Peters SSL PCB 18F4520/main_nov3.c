@@ -22,7 +22,7 @@
 
 
 
-#define SWITCH_DATA  			PORTCbits.RC4		// originally RC0
+#define SWITCH_DATA  			PORTCbits.RC0
 #define SWITCH_LOAD  			LATCbits.LATC1
 #define CLOCK_PIN  				LATCbits.LATC2
 #define LED_MUTE_DATA  			LATCbits.LATC5
@@ -45,6 +45,16 @@
 
 #define STOP_TMR_0				INTCONbits.TMR0IE=0
 #define START_TMR_0				INTCONbits.TMR0IF=0;INTCONbits.TMR0IE=1
+
+#define MANUAL_LED_EVEN			0b11011111;
+#define AUTO_LED_EVEN 			0b11101111;
+#define TOUCH_LED_EVEN 			0b11011111;
+#define WRITE_LED_EVEN 			0b11011111;
+#define MANUAL_LED_ODD			0b11111111;
+#define AUTO_LED_ODD 			0b11111110;
+#define TOUCH_LED_ODD 			0b11111101;
+#define WRITE_LED_ODD 			0b11111011;
+
 
 #define bit_set(var,bitno) ((var) |= 1 << (bitno))
 #define bit_clr(var,bitno) ((var) &= ~(1 << (bitno)))
@@ -76,9 +86,9 @@ ram near struct shiftDataStruct {
 	unsigned char mute;
 }shiftData;
 
-union INdataUnion {
+union IOdataUnion {
 	unsigned char data[16];
-	unsigned int word[8];
+	unsigned int vca[8];
 	struct{
 		unsigned vca_lo:8;
 		unsigned vca_hi:2;
@@ -88,23 +98,10 @@ union INdataUnion {
 		unsigned mute:1;
 		}channel[8];
 };
-union OUTdataUnion {
-	unsigned char data[16];
-	unsigned int word[8];
-	struct{
-		unsigned vca_lo:8;
-		unsigned vca_hi:2;
-		unsigned status_press:1;
-		unsigned status_release:1;
-		unsigned not_used:2;
-		unsigned mute_press:1;
-		unsigned mute_release:1;
-		}channel[8];
-};
 
-ram near union INdataUnion INdata;
-ram near union INdataUnion INbuffer;
-ram near union OUTdataUnion OUTdata;
+ram near union IOdataUnion INdata;
+ram near union IOdataUnion INbuffer;
+ram near union IOdataUnion OUTdata;
 ram near unsigned int VCAout[8];
 ram near unsigned int VCAoutOld[8];
 
@@ -167,7 +164,6 @@ BOOL clk_flg = FALSE;
 	unsigned int DACval;
 	unsigned int DACword;
 	unsigned int DACaddr;
-	unsigned char doOnce=0;
 
 
 	unsigned int vca_in;
@@ -325,21 +321,17 @@ void main (void)
 		}
 	while(1)
 	{
-		if(ParallelPortflag)							// New Data arrived
+		if(ParallelPortflag)						// New Data arrived
 		{
-			for(n=0;n<8;n++)							// loop thru channels
-			{
-				INdata.word[n]=INbuffer.word[n];		// Copy buffer
-			}
+			INdata=INbuffer;							// Copy buffer
 
 			for(chn=0;chn<8;chn++)						// loop thru channels
 			{
-				VCAout[chn]=1023-(PGtoVCA(INdata.word[chn]&0x3FF));
+				VCAout[chn]=1023-(PGtoVCA(INdata.vca[chn]&0x3FF));
 				ADC_value = VCAtoPG(VCAinOld[chn]);			// convert to linear scale
 				OUTdata.channel[chn].vca_lo = ADC_value&0xFF;	// split the WORD
 				OUTdata.channel[chn].vca_hi = ADC_value>>8;
 			}
-			doOnce=1;									// flag for mute switch reads
 			ParallelPortflag=0;							// Clear transfer flag. Buffer is safe to write to
 			Read_Switches();
 		}
@@ -442,21 +434,16 @@ void Read_Switches(void)
 	SWITCH_LOAD = 1;
 	for(n=0;n<8;n++){
 		for(m=0;m<10;m++){;}
-		if(OUTdata.channel[7-n].status != SWITCH_DATA)				// Check for STATUS SWITCH change
-		{
-			if(MUTE_IN) OUTdata.channel[7-n].status_press = 1;		// Event flag for status press
-			else		OUTdata.channel[7-n].status_release = 1;	// Event flag for status release
-		}
-		else
-		{
-			OUTdata.channel[7-n].status_press = 0;					// clear event flag
-			OUTdata.channel[7-n].status_release = 0;				// clear event flag
-		}
+		OUTdata.channel[7-n].status = PORTCbits.RC4;
 		CLOCK_PIN = 1;
 		for(m=0;m<10;m++){;}
 		CLOCK_PIN = 0;
 	}	
 }
+
+unsigned char test;
+
+
 
 //********************************************************************
 //
@@ -468,9 +455,9 @@ void Read_Switches(void)
 
 int PGtoVCA(int PG)
 	{
-	unsigned int VCA;				//VCA fader value
+	unsigned int VCA;		//VCA fader value
 	unsigned long groundlevel;		//VCA fader value as long
-	unsigned long val;				//VCA fader value as long
+	unsigned long val;		//VCA fader value as long
 
 	if(PG<157)
 		{
@@ -533,23 +520,8 @@ void Start_ADC(void)
 
 void Read_ADC(unsigned char chn)
 	{
-	unsigned int ADC_value;											// Start conversion
+	unsigned int ADC_value;									// Start conversion
 
-	if(doOnce)
-	{
-		if(OUTdata.channel[chn].mute != MUTE_IN)					// Check for MUTE change
-		{
-			if(MUTE_IN) OUTdata.channel[chn].mute_press = 1;		// Event flag for mute press
-			else		OUTdata.channel[chn].mute_release = 1;		// Event flag for mute release
-		}
-		else
-		{
-			OUTdata.channel[chn].mute_press = 0;					// clear event flag
-			OUTdata.channel[chn].mute_release = 0;					// clear event flag
-		}
-		doOnce=0;
-	}
-	
 	OUTdata.channel[chn].mute = MUTE_IN;			// Check for MUTE threshold ( over 6 V )
 
 	while( BusyADC() );								// Wait til ready
@@ -561,7 +533,7 @@ void Read_ADC(unsigned char chn)
 	TRISAbits.TRISA0 = 0;
 
 	VCAPassThru[chn] = ADC_value;					// Untouched value for manual fader state
-	ADC_value = 1023-ADC_value;						// reverse scale
+	ADC_value = 1023-ADC_value;			// reverse scale
 	ADC_value = (ADC_value + VCAinOld[chn])/2;
 	VCAinOld[chn] = ADC_value;
 	LATE = MUX[chn];
