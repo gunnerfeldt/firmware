@@ -1,0 +1,5 @@
+Error[1027] C:\MCC18\h\adc.h 32 : unable to locate 'pconfig.h'
+Error[1027] C:\MCC18\h\usart.h 32 : unable to locate 'pconfig.h'
+Error[1027] C:\MCC18\h\i2c.h 32 : unable to locate 'pconfig.h'
+Error[1027] C:\MCC18\h\timers.h 31 : unable to locate 'pconfig.h'
+Error[1027] C:\MCC18\h\pwm.h 32 : unable to locate 'pconfig.h'
