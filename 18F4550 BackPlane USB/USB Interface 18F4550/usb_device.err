@@ -1,0 +1,43 @@
+Error[1109] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 52 : type mismatch in redeclaration of 'USBDeviceState'
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 210 : symbol 'EP0_IN_EVEN' has not been defined
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 320 : call of function without prototype
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 356 : symbol 'EP0_OUT_EVEN' has not been defined
+Error[1131] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 356 : type mismatch in assignment
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 357 : symbol 'EP0_OUT_EVEN' has not been defined
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 358 : symbol 'EP0_OUT_EVEN' has not been defined
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 359 : symbol 'EP0_OUT_EVEN' has not been defined
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 367 : call of function without prototype
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 372 : call of function without prototype
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 378 : call of function without prototype
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 383 : call of function without prototype
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 411 : call of function without prototype
+Error[1109] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 436 : type mismatch in redeclaration of 'USBStallHandler'
+Error[1109] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 479 : type mismatch in redeclaration of 'USBSuspend'
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 518 : call of function without prototype
+Error[1109] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 536 : type mismatch in redeclaration of 'USBWakeFromSuspend'
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 547 : call of function without prototype
+Error[1109] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 596 : type mismatch in redeclaration of 'USBCtrlEPService'
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 613 : symbol 'USB_NEXT_EP0_OUT_PING_PONG' has not been defined
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 616 : symbol 'SETUP_TOKEN' has not been defined
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 619 : call of function without prototype
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 624 : call of function without prototype
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 631 : call of function without prototype
+Error[1109] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 676 : type mismatch in redeclaration of 'USBCtrlTrfSetupHandler'
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 687 : symbol 'SHORT_PKT_NOT_USED' has not been defined
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 690 : symbol 'WAIT_SETUP' has not been defined
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 696 : call of function without prototype
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 697 : call of function without prototype
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 700 : call of function without prototype
+Error[1109] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 723 : type mismatch in redeclaration of 'USBCtrlTrfOutHandler'
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 725 : symbol 'CTRL_TRF_RX' has not been defined
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 727 : call of function without prototype
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 731 : call of function without prototype
+Error[1109] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 759 : type mismatch in redeclaration of 'USBCtrlTrfInHandler'
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 766 : symbol 'USB_NEXT_EP0_IN_PING_PONG' has not been defined
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 783 : symbol 'CTRL_TRF_TX' has not been defined
+Error[1131] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 785 : type mismatch in assignment
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 786 : call of function without prototype
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 789 : symbol 'SHORT_PKT_SENT' has not been defined
+Warning[2058] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 809 : call of function without prototype
+Error[1109] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 830 : type mismatch in redeclaration of 'USBPrepareForNextSetupTrf'
+Error[1105] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\Microchip\USB\usb_device.c 855 : symbol 'CTRL_TRF_RX' has not been defined
