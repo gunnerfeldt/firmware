@@ -1,0 +1,1 @@
+Warning[2001] C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 Fader\Motor Fader v6.2 18F4520 - Touch Test\OA_SWITCHES_routine.c 22 : non-near symbol 'TOUCH_RELEASE' declared in access section 'volatile_access'
