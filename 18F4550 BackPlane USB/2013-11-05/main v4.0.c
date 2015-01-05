@@ -41,6 +41,8 @@
   3.3   	2014-11-12
 		Group snapshots & recall
 
+  Test github 2015-01-05
+
 
 ********************************************************************/
 
@@ -922,7 +924,7 @@ void Backplane_Comm(unsigned char LockedQframe)
 	        COMM_READ;														// Set parallel port to READ
 
 //
-// Very Critical !!!! 
+// Very Critical !!!!
 // Changed from 8 to 12 on 2014-11-24. 8 did not work!!!
 //
 
@@ -966,7 +968,7 @@ void Backplane_Comm(unsigned char LockedQframe)
 					usb_in.SLOT[LockedQframe].SSL_DATA[(k*16)+(i*2)]=TempIn[(k*16)+(i*2)];			// if everything ok, copy data
 					usb_in.SLOT[LockedQframe].SSL_DATA[(k*16)+(i*2)+1]=TempIn[(k*16)+(i*2)+1];
 				}
-			}	
+			}
 		}
 		usb_in.SLOT[LockedQframe].BYTES[0] = 0x00;				// Automation Data CMD_GROUP
 	}
