@@ -122,9 +122,8 @@ struct  {
 		unsigned vca_lo:8;
 		unsigned vca_hi:2;
 		unsigned status:2;
+		unsigned not_used:2;
 		unsigned motor_on:1;
-		unsigned event:1;
-		unsigned not_used:1;
 		unsigned mute:1;
 		};
 }indata;
@@ -133,20 +132,14 @@ volatile near union OUTdataUnion {
 unsigned char data[BUFSIZE];
 struct  {
 
-//		unsigned vca_lo:8;
-//		unsigned vca_hi:2;
-//		unsigned status:2;
-//		unsigned touch_sense:1;
-//		unsigned error:2;
-//		unsigned mute:1;
-
 		unsigned vca_lo:8;
 		unsigned vca_hi:2;
 		unsigned status:2;
-		unsigned touch_sense:1;
-		unsigned event:1;
-		unsigned not_used:1;
-		unsigned mute:1;
+		unsigned touch_press:1;
+		unsigned touch_release:1;
+		unsigned mute_press:1;
+		unsigned mute_release:1;
+
 		};
 }outdata;
 
@@ -278,7 +271,7 @@ InterruptHandlerHigh ()
 //	INTCONbits.TMR0IE = 0;
 //	PIE1bits.TMR2IE = 0;
 	if(PIR1bits.SSPIF)					// if new I2C event occured
-		{
+		{	
 		if (HandleI2C()==5)				// when I2C transfer i done	
 			{	
 			I2Cflag = 1;				// flag for process	
@@ -337,15 +330,15 @@ void main(void)
 //	if (outdata.status == 0x02 || outdata.status == 0x03) outdata.event = 1;
 //	Load_Ch_Digits((fader_address/2)+1);
 	Update_LED_Display(88);
+			
 	while (1) // loop forever
 	{	
 	if (I2Cflag)
 		{
-
 		I2Cflag = 0;
 
 //		if (indata.event)
-		if (indata.data[2] == 0xF1 && snapshot_flag == 0)					// control byte for read/write
+		if (1 == 1 && snapshot_flag == 0)					// control byte for read/write
 			{
 			FADER_SET = indata.data[1] & 3;
 			FADER_SET = (FADER_SET<<8)+indata.data[0];
@@ -401,12 +394,12 @@ void main(void)
 			outdata.data[2] = 0xF1;					// control byte for read/write
 		if (FADER_USB != PREV_FADER_USB && FADER_TOUCH)
 			{
-			outdata.event = 1;
+//			outdata.event = 1;
 			PREV_FADER_USB = FADER_USB;
 			}
-		else outdata.event = 0;
+//		else outdata.event = 0;
 
-			DISPLAY = LOOP_CNTR;
+//			DISPLAY = LOOP_CNTR;
 			LOOP_CNTR = 1;
 
 //		outdata.touch_sense = FADER_TOUCH;
@@ -446,7 +439,7 @@ void main(void)
 			CalcPWM2(GOAL);
 			Handle_Fader();
 			INT_ON;
-
+			
 			if(LOOP_CNTR<29)LOOP_CNTR++;
 			
 
@@ -466,7 +459,7 @@ void main(void)
 //				}
 
 			SampleCnt = 0;
-			outdata.touch_sense = FADER_TOUCH;
+//			outdata.touch_sense = FADER_TOUCH;
 			scan_switches();
 			if (FADER_TOUCH)
 				{
@@ -539,7 +532,7 @@ void Handle_Fader(void)
 
 
 //	HARD_MOTOR_ON &= indata.motor_on;
-//	HARD_MOTOR_ON = 1;
+	HARD_MOTOR_ON = 1;
 	if (HARD_MOTOR_ON == 0 || touch)
 		{
 		SetDCPWM2(0);
@@ -630,7 +623,7 @@ int HandleI2C(void)
 			if (I2CSTAT == STATE_1){						// address match, write
 				index = 0;									// clear buffer index
 				address = SSPBUF;							// dummy read to cear BF
-				SSPCON1bits.CKP = 1; // release clock			
+				SSPCON1bits.CKP = 1; // release clock		
 				return 1;}
 			if (I2CSTAT == STATE_2){						// master write byte
 				indata.data[index] = SSPBUF;				// read data and clear BF
@@ -668,6 +661,7 @@ void myWriteI2C(void)
 		{							
 		SSPCON1bits.WCOL = 0;								// clear collision bit
 		SSPBUF = outdata.data[index];						// load hardware buffer
+//		SSPBUF = 0x55;										// load hardware buffer
 		}while(SSPCON1bits.WCOL);							// if there was a collision, try again
 		SSPCON1bits.CKP = 1;								// release the clock stretch
 	}
@@ -676,21 +670,49 @@ void myWriteI2C(void)
 //---------------------------------------------------------------------
 // scan_switches
 //---------------------------------------------------------------------
+unsigned char LastStatus=0;
+
 void scan_switches()
-	{
+{
+	unsigned char SwitchBits=0;
+	unsigned char PresSwitches=0;
+	unsigned char RelSwitches=0;
+	unsigned char SwitchXOR=0;
 
-	outdata.status = 0;
-	if (AUTO_SW) outdata.status = 0x01;
-	if (TOUCH_SW) outdata.status = 0x02;
-	if (WRITE_SW) outdata.status = 0x03;
-	outdata.mute = MUTE_SW;
+	outdata.data[1] &= 0x03;			// Clear all flags
+//	if(AUTO_SW != LastSw) {
+	outdata.status=AUTO_SW;
+//	}
+//	LastSw=AUTO_SW;
+/*
+	SwitchBits = AUTO_SW;
+	SwitchBits = (SwitchBits<<1) + TOUCH_SW;
+	SwitchBits = (SwitchBits<<1) + WRITE_SW;
+	SwitchBits = (SwitchBits<<1) + MUTE_SW;
+	SwitchBits = (SwitchBits<<1) + FADER_TOUCH;
 
+	if(SwitchBits!=StoredSwitchBits) {                            // If previous 8 bits are NOT equal with the current 8 bits:
+	    SwitchXOR=SwitchBits^StoredSwitchBits;                    // Create a mask with all changed bits
+	    PresSwitches=SwitchBits&SwitchXOR;                        // Mask out all Pressed switches
+	    RelSwitches=StoredSwitchBits&SwitchXOR;                    // Mask out all Released Switches
 
-	
-//	if (AUTO_SW) {trouble = 1 ; fader_address=80;}
-//	if (WRITE_SW) trouble = 0;
+		outdata.touch_press = PresSwitches & 1;
+		outdata.touch_release = RelSwitches & 1;
+        PresSwitches>>=1;                                            // Shift right
+        RelSwitches>>=1;
+
+		outdata.mute_press = PresSwitches & 1;
+		outdata.mute_release = RelSwitches & 1;
+        PresSwitches>>=1;                                            // Shift right
+        RelSwitches>>=1;
+		
+		if((PresSwitches & 0x01)==0x01)outdata.status=0x01;
+
 
 	}
+	StoredSwitchBits=SwitchBits;                                // Copy Switch pins til next read
+*/
+}
 
 
 
@@ -928,7 +950,6 @@ void Init(void)
 
 	TRISCbits.TRISC3 =1;
 	TRISCbits.TRISC4 =1;
-
 	OpenI2C (SLAVE_7, SLEW_ON);
 	SSPCON2bits.SEN = 1;
 
@@ -1033,7 +1054,7 @@ void Init(void)
 	fader_ID = ID-1;
 
 	fader_address = fader_ID*2;
-	DISPLAY = 0;
+	DISPLAY = ID;
 	SSPADD = 0xE0 + fader_address; // slave address
 	LATDbits.LATD3 = 0;
 	}

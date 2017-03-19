@@ -43,6 +43,9 @@
 #define STATUS_MASK				0x0C;
 #define MUTE_MASK				0x10;
 
+#define IO_CARD_ID				0x02				// bits 0b00110000 is free for check bits. 00 or 11 could be scrap data.
+											// 01 or 10 is suitable
+
 #define STOP_TMR_0				INTCONbits.TMR0IE=0
 #define START_TMR_0				INTCONbits.TMR0IF=0;INTCONbits.TMR0IE=1
 
@@ -96,7 +99,7 @@ union OUTdataUnion {
 		unsigned vca_hi:2;
 		unsigned status_press:1;
 		unsigned status_release:1;
-		unsigned not_used:2;
+		unsigned card_id:2;
 		unsigned mute_press:1;
 		unsigned mute_release:1;
 		}channel[8];
@@ -109,6 +112,10 @@ ram near unsigned int VCAout[8];
 ram near unsigned int VCAoutOld[8];
 
 #pragma udata
+
+unsigned char LocalMuteBits = 0; 				// 8 mute bits.
+unsigned char SwitchBits = 0; 					// 8 switch bits.
+unsigned char StoredSwitchBits = 0; 			// 8 accumulated switch bits.
 
 int VCAoutStep[8];
 unsigned int VCAinOld[8];
@@ -176,6 +183,8 @@ BOOL clk_flg = FALSE;
 	byte LED_byte;
 	unsigned char test=0;
 
+	unsigned int TEST2=0;
+
 	unsigned char WriteToDACflag = 0;
 	unsigned char ParallelPortflag = 0;
 	unsigned char Q_Frame_Flag = 1;
@@ -202,7 +211,7 @@ int VCAtoPG(int);
 		unsigned char n, chn;
 		unsigned char last_clk=0;
 		unsigned char clk=0;
-		
+//		OUTdata.data[1]	= 0;
 		if (INTCONbits.INT0IF)									// Interrupt flag for RB0
 		{
 			cnt=0;	
@@ -216,6 +225,7 @@ int VCAtoPG(int);
 					while(SSP_clk==0){;}
 					cnt++;
 					LATD = OUTdata.data[(cnt)];				// Put byte on parallel port
+//					LATD = 0;
 					while(SSP_clk==1){;}
 					if(!SSP_en)break;
 				}
@@ -338,6 +348,7 @@ void main (void)
 				ADC_value = VCAtoPG(VCAinOld[chn]);			// convert to linear scale
 				OUTdata.channel[chn].vca_lo = ADC_value&0xFF;	// split the WORD
 				OUTdata.channel[chn].vca_hi = ADC_value>>8;
+				OUTdata.channel[chn].card_id=IO_CARD_ID;
 			}
 			doOnce=1;									// flag for mute switch reads
 			ParallelPortflag=0;							// Clear transfer flag. Buffer is safe to write to
@@ -374,18 +385,13 @@ void Set_Mutes_Leds(void)
 	MUTE_LOAD=0;
 	for(i=0;i<8;i++)								// First send Mute data
 		{
-		if(INdata.channel[i].status==0) {			// if Fader is in Manual Input MUTE > Output MUTE
-			LED_MUTE_DATA=OUTdata.channel[i].mute;
-		}
-		else {										// Else. System is in control. Latching
-			LED_MUTE_DATA=INdata.channel[i].mute;
-		}
-		CLOCK_PIN=1;
-		CLOCK_PIN=0;	
-		}
-	for(i=0;i<8;i++) 	// TRIM LED							// Send LED data
-		{
-		LED_MUTE_DATA=(INdata.channel[7-i].status!=0);		// TRIM LED should lit for all states except manual
+		LED_MUTE_DATA=testbit_on(LocalMuteBits,i);
+//		if(INdata.channel[i].status==0) {			// if Fader is in Manual Input MUTE > Output MUTE
+//			LED_MUTE_DATA=OUTdata.channel[i].mute;
+//		}
+//		else {										// Else. System is in control. Latching
+//			LED_MUTE_DATA=INdata.channel[i].mute;
+//		}
 		CLOCK_PIN=1;
 		CLOCK_PIN=0;	
 		}
@@ -393,6 +399,12 @@ void Set_Mutes_Leds(void)
 		{
 		LED_MUTE_DATA=(INdata.channel[7-i].status==3);													// Write is lit only in WRITE STATE
 		if(INdata.channel[7-i].touchsense)LED_MUTE_DATA=(BlinkLED&(INdata.channel[7-i].status!=0));		// Write blink when Touch sense is set and not in Manual
+		CLOCK_PIN=1;
+		CLOCK_PIN=0;	
+		}
+	for(i=0;i<8;i++) 	// TRIM LED							// Send LED data
+		{
+		LED_MUTE_DATA=(INdata.channel[7-i].status!=0);		// TRIM LED should lit for all states except manual
 		CLOCK_PIN=1;
 		CLOCK_PIN=0;	
 		}
@@ -410,6 +422,8 @@ void Set_Get_VCA(unsigned char ch){
 	unsigned int DACvalue;
 	Read_ADC(ch);								// Read the ADC
 
+//	INdata.channel[ch].status=1;				// !!!!!!!!!!!!!!
+
 	if(INdata.channel[ch].status==0) {			// if Fader is in Manual state DAC should copy ADC
 		DACvalue = VCAPassThru[ch];			// VCA data still in log form
 	}
@@ -417,9 +431,10 @@ void Set_Get_VCA(unsigned char ch){
 		DACvalue = (VCAout[ch]+(VCAoutOld[ch]))/2;	// VCA data from computer
 		VCAoutOld[ch]=DACvalue;
 	}
+
+
 	addr = ch+1;								// address for the DAC ( 1 of 8)
 	word = (addr<<12)+(DACvalue<<2);			// align the data right
-
 
 	CLOCK_PIN = 0;								// prepare DAC chip
 	DAC_LOAD = 0;
@@ -436,26 +451,34 @@ void Set_Get_VCA(unsigned char ch){
 // *********************************** Read Status Switches ****************************************
 void Read_Switches(void)
 	{
-	unsigned char n,m;
-	// Read SWITCH
+	unsigned char n,m,SwitchXOR,PresSwitches,RelSwitches;
+	SwitchBits=0;
 	SWITCH_LOAD = 0;
 	SWITCH_LOAD = 1;
-	for(n=0;n<8;n++){
-		for(m=0;m<10;m++){;}
-		if(OUTdata.channel[7-n].status != SWITCH_DATA)				// Check for STATUS SWITCH change
-		{
-			if(MUTE_IN) OUTdata.channel[7-n].status_press = 1;		// Event flag for status press
-			else		OUTdata.channel[7-n].status_release = 1;	// Event flag for status release
-		}
-		else
-		{
-			OUTdata.channel[7-n].status_press = 0;					// clear event flag
-			OUTdata.channel[7-n].status_release = 0;				// clear event flag
-		}
+
+	for (n=0;n<8;n++){
+		OUTdata.channel[n].status_press = 0;					// clear event flag instead of waitloop
+		if(SWITCH_DATA)bit_set(SwitchBits,n);					// Set a 1 if pin is 1
 		CLOCK_PIN = 1;
-		for(m=0;m<10;m++){;}
+		OUTdata.channel[n].status_release = 0;				// clear event flag instead of waitloop
 		CLOCK_PIN = 0;
-	}	
+	}
+
+	if(SwitchBits!=StoredSwitchBits) {							// If previous 8 bits are NOT equal with the current 8 bits:
+		SwitchXOR=SwitchBits^StoredSwitchBits;					// Create a mask with all changed bits
+		PresSwitches=SwitchBits&SwitchXOR;						// Mask out all Pressed switches
+		RelSwitches=StoredSwitchBits&SwitchXOR;					// Mask out all Released Switches
+
+		for (n=0;n<8;n++){
+			OUTdata.channel[7-n].status_press	= PresSwitches & 1;		// Pack pressed switches in the Struct
+			OUTdata.channel[7-n].status_release	= RelSwitches & 1;		// Pack released switches in the Struct
+			PresSwitches>>=1;											// Shift right
+			RelSwitches>>=1;											// Shift right
+		}
+	}
+	StoredSwitchBits=SwitchBits;								// Copy Switch pins til next read
+
+		
 }
 
 //********************************************************************
@@ -535,6 +558,7 @@ void Read_ADC(unsigned char chn)
 	{
 	unsigned int ADC_value;											// Start conversion
 
+/*
 	if(doOnce)
 	{
 		if(OUTdata.channel[chn].mute != MUTE_IN)					// Check for MUTE change
@@ -551,7 +575,7 @@ void Read_ADC(unsigned char chn)
 	}
 	
 	OUTdata.channel[chn].mute = MUTE_IN;			// Check for MUTE threshold ( over 6 V )
-
+*/
 	while( BusyADC() );								// Wait til ready
 
 	ADC_value = ADRESH;	

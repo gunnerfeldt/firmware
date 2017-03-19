@@ -60,6 +60,12 @@
 #define SET_PORT		LATD
 #define GET_PORT		PORTD
 
+#define IO_CARD_ID		0x20				// bits 0b00110000 is free for check bits. 00 or 11 could be scrap data.
+											// 01 or 10 is suitable
+#define DEBUG1			LATEbits.LATE0
+#define DEBUG2			LATEbits.LATE1
+#define DEBUG3			LATEbits.LATE2
+
 /** INCLUDES *******************************************************/
 #include "./USB/usb.h"
 #include "HardwareProfile.h"
@@ -154,7 +160,7 @@ typedef union {							// USB_OUT_BUF - Host to Device data struct
 		struct {						// CMD - Command struct
 			unsigned CMD_GROUP:4;		// Commands belongs to different groups
 			unsigned CMD:4;				// Command
-		};								// CMD ?
+		}CMD;								// CMD ?
 
 		struct {						// MTC_PROP	- MTC Properties struct
 			unsigned ID:2;				// Quarter frame ID.
@@ -185,7 +191,7 @@ typedef union {							// USB_IN_BUF - Device to Host data struct
 		struct {						// CMD - Command struct
 			unsigned CMD_GROUP:4;		// Commands belongs to different groups
 			unsigned CMD:4;				// Command
-		};								// CMD ?
+		}CMD;								// CMD ?
 
 		struct {						// MTC_PROP	- MTC Properties struct
 			unsigned ID:2;				// Quarter frame ID.
@@ -219,7 +225,8 @@ struct {
 	USB_OUT_BUF SLOT[4];
 }usb_out;
 
-USB_BUF TEMP_BUF;
+USB_OUT_BUF TEMP_BUF;
+unsigned char TempIn[64];
 
 #pragma udata
 
@@ -336,6 +343,7 @@ void Address_MUX (unsigned char);
 	unsigned int mtcIdleCntr=0;	
 	unsigned char FakeTick=0;
 	unsigned char RUN_STATUS = 0;
+	unsigned char Idle=1;
 	
 	//These are your actual interrupt handling routines.
 	#pragma interrupt YourHighPriorityISRCode
@@ -346,12 +354,21 @@ void Address_MUX (unsigned char);
 	 if(PIR1bits.TMR1IF)
 		{
 		mtcIdleCntr++;									// it waits a few clock ticks until it considers the MTC stopped
-		if(mtcIdleCntr>7)
+		if(mtcIdleCntr>4)
 		{
 			RUN_STATUS = 0;
 			FakeTick=1;
 			mtcIdleCntr=7;
 			MTC_q_frame++;								// still count the quarter frame ID
+			if(Idle==0)
+			{
+				Idle=1;
+//				MTC_q_frame=0;
+				usb_in.SLOT[0].MTC_PROP.STOP=1;
+				usb_in.SLOT[1].MTC_PROP.STOP=1;
+				usb_in.SLOT[2].MTC_PROP.STOP=1;
+				usb_in.SLOT[3].MTC_PROP.STOP=1;
+			}
 			if(MTC_q_frame>3) MTC_q_frame=0;
 		}
 		PIR1bits.TMR1IF = 0;
@@ -368,8 +385,18 @@ void Address_MUX (unsigned char);
                                                     	// Look for MTC status byte (0xF1 = MTC standard)
 			if (MTC==0xF1)
 			{                                           // reset the idle timer threshold counter.
+
 				mtcIdleCntr = 0;
-				MTC_q_frame++;							// Count Quarter Frame here ...
+				if(Idle){
+					MTC_q_frame=0;
+					Idle=0;
+					usb_in.SLOT[0].MTC_PROP.RUN=1;
+					usb_in.SLOT[1].MTC_PROP.RUN=1;
+					usb_in.SLOT[2].MTC_PROP.RUN=1;
+					usb_in.SLOT[3].MTC_PROP.RUN=1;
+				}											// Coming from faketick, Qframe should always start on 0
+				else MTC_q_frame++;							// Count Quarter Frame here ...
+				
                                                     	// I want to flag the clock on the first byte on the first quarter frame
 				if(armClock)                        	// If the Previous byte was the last in a 4 byte sequence
                 {                   					// I arm the clock then
@@ -421,7 +448,6 @@ void Address_MUX (unsigned char);
         //Clear the interrupt flag
         //Etc.
             #if defined(USB_INTERRUPT)
-
                     USBDeviceTasks();
             #endif
     }
@@ -461,9 +487,17 @@ void main(void)
     TRISCbits.TRISC7 = 1;
     TRISCbits.TRISC2 = 0;
     TRISD=0;
+	TRISEbits.TRISE0=0;
+	TRISEbits.TRISE1=0;
+	TRISEbits.TRISE2=0;
     
     TRISB = 0x00;
 	LATCbits.LATC2=0;				// Release Strobe !!!
+
+
+			DEBUG1=0;
+			DEBUG2=0;
+			DEBUG3=0;
     while(1)
     {
 
@@ -484,13 +518,13 @@ void main(void)
 		{		
 			if (MTClongINT != MTClongEXT+1) 			// if not +1 frame. Report.
 			{
-				usb_in.SLOT[MTC_q_frame].PROP.MTC_ERR=1;
+				usb_in.SLOT[MTC_q_frame].MTC_PROP.JUMP=1;
 
 				MTClongINT=MTClongEXT;				// and correct.
 			}
 			else
 			{
-				usb_in.SLOT[MTC_q_frame].PROP.MTC_ERR=0;
+			;
 			}
 			Clock = 0;
 		}
@@ -501,13 +535,14 @@ void main(void)
 	{	
 		COMM_STROBE=1;				// Release Strobe !!!
 		if(MTC_q_frame==0) mLED_1_Toggle();				// toogle LED every frame
+
 		Backplane_Comm();       // Do system communication
 		COMM_STROBE=0;				// Strobe Cards for ACTION !!!
 	}
 	
 
                                 // Check bus status and service USB interrupts.
-
+		;
         USBDeviceTasks();       // Interrupt or polling method.  If using polling, must call
                                 // this function periodically.  This function will take care
                                 // of processing and responding to SETUP transactions 
@@ -520,6 +555,7 @@ void main(void)
                                 // be sent by the host to your device.  In most cases, the
                                 // USBDeviceTasks() function does not take very long to
                                 // execute (~50 instruction cycles) before it returns.
+
 
 		ProcessIO();				// system data is shuffled in Backplane_Comm() but
 
@@ -539,86 +575,85 @@ void Backplane_Comm(void)
     unsigned char i,j,k,l;	
 	
 	test++;
-	
-/*
-	if(MTC_q_frame==2)
-	{
-	    //MUX
 
-		Address_MUX(12);				// Address for the Motor Fader/I2C Pic
-        MUX_ENABLE=1;                   // Set the MUX address
+	
+// I2C CARD I2C CARD I2C CARD I2C CARD I2C CARD I2C CARD I2C CARD I2C CARD I2C CARD I2C CARD I2C CARD I2C CARD I2C CARD I2C CARD I2C CARD 
+
+
+        USBDeviceTasks();
+        //MUX
+		Address_MUX(12);
+        
+		MUX_ENABLE=0;                   // Set the MUX address
         COMM_READ;                      // Set parallel port to READ
-        COMM_DIR=1;                     // This is not used (yet)
         for(j=0;j<5;j++)
         {
             ;
         }
 
-        for(i=0;i<8;i++)               // 2 bytes x 4 channels
+
+        for(i=0;i<4;i++)               // 2 bytes x 2 channels 
         {
-            //Read PORT
-            usb_in.SLOT[2].BYTES[56+i]=GET_PORT;       // Place byte in the appropriate slot
-            COMM_CLOCK = 1;                                             // Clock
+      		//      Read PORT
+            usb_in.SLOT[(MTC_q_frame>>1)+2].MF_DATA[i+((MTC_q_frame&1)<<2)]=GET_PORT;       // Place byte in the appropriate slot
+            COMM_CLOCK = 1;      
             //Delay
-            for(j=0;j<5;j++)
-            {
-                ;
-            }
-            COMM_CLOCK = 0;
-        }
-        for(i=0;i<8;i++)               // 2 bytes x 4 channels
-        {
-            //Read PORT
-            usb_in.SLOT[3].BYTES[56+i]=GET_PORT;       // Place byte in the appropriate slot
-            COMM_CLOCK = 1;                                             // Clock
-            //Delay
-            for(j=0;j<5;j++)
+            for(j=0;j<4;j++)
             {
                 ;
             }
             COMM_CLOCK = 0;
         }
 
-       COMM_WRITE;                                                     // Set port to WRITE
- //       COMM_DIR=0;                                                     // Not used
 
-        for(i=0;i<8;i++)                                               // Write 2 x bytes to each card
+       	USBDeviceTasks();
+        COMM_WRITE;                                                     // Set port to WRITE
+		SET_PORT=MTC_q_frame;											// I2C card must channel no								
+        for(j=0;j<2;j++)
         {
-            SET_PORT=usb_out.SLOT[0].BYTES[56+i];      // Take byte from the right slot
+            ;
+        }
+
+        COMM_CLOCK = 1;                                             // Clock
+        //Delay
+        for(j=0;j<4;j++)
+        {
+            ;
+        }
+        COMM_CLOCK = 0;
+
+       	USBDeviceTasks();
+        for(i=0;i<4;i++)                                               // Write 2 x bytes to each card
+        {
+            SET_PORT=usb_out.SLOT[(MTC_q_frame>>1)+2].MF_DATA[i+((MTC_q_frame&1)<<2)];      // Take byte from the right slot 
+        //    SET_PORT=0x08;
+            //Delay
+            for(j=0;j<2;j++)
+            {
+                ;
+            }
+
             COMM_CLOCK = 1;                                             // Clock
             //Delay
-            for(j=0;j<5;j++)
+            for(j=0;j<4;j++)
             {
                 ;
             }
             COMM_CLOCK = 0;
         }
-        for(i=0;i<8;i++)                                               // Write 2 x bytes to each card
-        {
-            SET_PORT=usb_out.SLOT[1].BYTES[56+i];      // Take byte from the right slot
-            COMM_CLOCK = 1;                                             // Clock
-            //Delay
-            for(j=0;j<5;j++)
-            {
-                ;
-            }
-            COMM_CLOCK = 0;
-        }
-       COMM_READ;                                                     // Set port to WRITE
 
-        MUX_ENABLE=1; 
-	}
-*/
+        COMM_READ;                      // Set parallel port to READ
+        MUX_ENABLE=1;                                                   // Turn off MUX
+
+
 // SSL CARDS SSL CARD SSL CARDS SSL CARD SSL CARDS SSL CARD SSL CARDS SSL CARD SSL CARDS SSL CARD SSL CARDS SSL CARD SSL CARDS SSL CARD
 
-//	usb_out.SLOT[0].BYTES[8]=0;
-//	usb_out.SLOT[0].BYTES[9]=0x7;
 
     for(k=0;k<3;k++)                    // Each USB packet has 48 bytes for 24 channels (3 banks).
     {
+        USBDeviceTasks();
         //MUX
 		Address_MUX((MTC_q_frame*3)+k);
-//		Address_MUX((MTC_q_frame*3)+k+12);
         
 		MUX_ENABLE=0;                   // Set the MUX address
         COMM_READ;                      // Set parallel port to READ
@@ -630,8 +665,7 @@ void Backplane_Comm(void)
         for(i=0;i<16;i++)               // 2 bytes x 8 channels from each card
         {
       //      //Read PORT
-      //     usb_in.SLOT[MTC_q_frame].DATA[(k*16)+i]=usb_out.SLOT[MTC_q_frame].BYTES[(k*16)+i+8];    // Dummy thing. Debugging
-             usb_in.SLOT[MTC_q_frame].DATA[(k*16)+i]=GET_PORT;       // Place byte in the appropriate slot
+             usb_in.SLOT[MTC_q_frame].SSL_DATA[(k*16)+i]=GET_PORT;       // Place byte in the appropriate slot
             COMM_CLOCK = 1;      
             //Delay
             for(j=0;j<4;j++)
@@ -641,6 +675,9 @@ void Backplane_Comm(void)
             COMM_CLOCK = 0;
         }
         COMM_WRITE;                                                     // Set port to WRITE
+
+
+
   //      COMM_DIR=0;                                                     // Not used
 
         for(i=0;i<16;i++)                                               // Write 2 x bytes to each card
@@ -664,6 +701,30 @@ void Backplane_Comm(void)
         COMM_READ;                      // Set parallel port to READ
         MUX_ENABLE=1;                                                   // Turn off MUX
     }
+    for(k=0;k<3;k++)                    // Test for forbidden states to exclude empty ports
+    {
+		if((usb_in.SLOT[MTC_q_frame].SSL_DATA[1+(k*16)]&0x0C)==0x0C ||
+		(usb_in.SLOT[MTC_q_frame].SSL_DATA[1+(k*16)]&0x30)!=IO_CARD_ID)	// Both status press and release are set
+		{
+	        for(i=0;i<16;i++)                                               
+			{
+				usb_in.SLOT[MTC_q_frame].SSL_DATA[(k*16)+i]=0;
+			}
+		}
+	}
+    for(i=0;i<4;i++)                                               
+	{
+		if((usb_in.SLOT[2].MF_DATA[1+(i*2)]&0x30)==0x30)	// Both touch press and release are set
+		{
+			usb_in.SLOT[2].MF_DATA[(i*2)]=0;
+			usb_in.SLOT[2].MF_DATA[1+(i*2)]=0;
+		}
+		if((usb_in.SLOT[3].MF_DATA[1+(i*2)]&0x30)==0x30)	// Both touch press and release are set
+		{
+			usb_in.SLOT[3].MF_DATA[(i*2)]=0;
+			usb_in.SLOT[3].MF_DATA[1+(i*2)]=0;
+		}
+	}
 }
 
                                                                         // MTC structs for unpacking MTC data
@@ -933,6 +994,9 @@ void UserInit(void)
  *
  * Note:            None
  *******************************************************************/
+//unsigned char fakeStatus=1;
+//unsigned char fakeVca=0;
+
 void ProcessIO(void)
 {   
     unsigned char i, j;
@@ -945,20 +1009,35 @@ void ProcessIO(void)
 	{
 	    if(!HIDTxHandleBusy(USBInHandle))                                           // if USB>Host buffer is empty
 	    {
-                usb_in.SLOT[MTC_q_frame].PROP.ID = MTC_q_frame;                         // MTC_q_frame is 2 bit indicator of subframe 4 per frame
-                usb_in.SLOT[MTC_q_frame].MTC = MTClongINT;                              // 4 x 64 bytes packets are sent to form complete transfer
-                usb_in.SLOT[MTC_q_frame].PROP.MTC_FPS = FPS;    
-	        USBInHandle = HIDTxPacket(HID_EP,(BYTE*)&usb_in.SLOT[MTC_q_frame],64);  // Point to USB>Host buffer
-                load_USB_flag=0;                                                        // Clear flag
-//              mLED_1_Toggle();
+				if(usb_in.SLOT[MTC_q_frame].MTC_PROP.RUN==1)DEBUG1=1;
+				else DEBUG1=0;
+
+                usb_in.SLOT[MTC_q_frame].MTC_PROP.ID = MTC_q_frame;                        // MTC_q_frame is 2 bit indicator of subframe 4 per frame
+                usb_in.SLOT[MTC_q_frame].MTC_PROP.POS = MTClongINT;                              // 4 x 64 bytes packets are sent to form complete transfer
+                usb_in.SLOT[MTC_q_frame].MTC_PROP.FPS = FPS;    
+				for(i=0;i<64;i++)
+					{
+						TempIn[i]=usb_in.SLOT[MTC_q_frame].BYTES[i];              				 // 
+					} 
+	        	USBInHandle = HIDTxPacket(HID_EP,(BYTE*)&TempIn,64);  // Point to USB>Host buffer
+				
+				usb_in.SLOT[MTC_q_frame].MTC_PROP.STOP=0;
+				usb_in.SLOT[MTC_q_frame].MTC_PROP.RUN=0;
+				usb_in.SLOT[MTC_q_frame].MTC_PROP.JUMP=0;
+                load_USB_flag=0;   
 	    }
 	}
 
+
     if(!HIDRxHandleBusy(USBOutHandle))                                                  // if guess Host>USB is only busy during transfer
     {   
-		slot = TEMP_BUF.BYTES[0]&0x03;													// 2 bits determing packet = 0,1,2 or 3
-        usb_out.SLOT[slot]=TEMP_BUF;                                      				 // TEMP_BUF is where Host>USB packets go
-		
+		slot = TEMP_BUF.BYTES[1]&0x03;													// 2 bits determing packet = 0,1,2 or 3
+
+		for(i=0;i<64;i++)
+			{
+				usb_out.SLOT[slot].BYTES[i]=TEMP_BUF.BYTES[i];              				 // TEMP_BUF is where Host>USB packets go
+			}        
+
         if(!HIDRxHandleBusy(USBOutHandle))                                              // Re-arm the OUT endpoint for the next packet
         {
             USBOutHandle = HIDRxPacket(HID_EP,(BYTE*)&TEMP_BUF.BYTES,64);               // Give Host>USB the pointer to TEMP_BUF

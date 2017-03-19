@@ -1,5 +1,5 @@
 MPLINK 4.48, Linker
-Linker Map File - Created Wed Nov 27 09:42:52 2013
+Linker Map File - Created Tue Jan 21 10:46:06 2014
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -13,43 +13,43 @@ REMAPPED_HIGH_INTERRUPT_VECTOR       code   0x001008    program   0x000006
 AppVersionAndSignatureSection    romdata   0x001016    program   0x000002
 REMAPPED_LOW_INTERRUPT_VECTOR       code   0x001018    program   0x000006
                    .cinit    romdata   0x00102a    program   0x00000e
-       .code_usb_device.o       code   0x001038    program   0x000cf2
-             .code_main.o       code   0x001d2a    program   0x000a68
-.romdata_usb_descriptors.o    romdata   0x002792    program   0x0000c5
-    .idata_usb_device.o_i    romdata   0x002857    program   0x000000
-    .romdata_usb_device.o    romdata   0x002857    program   0x000000
-.idata_usb_function_hid.o_i    romdata   0x002857    program   0x000000
-.romdata_usb_function_hid.o    romdata   0x002857    program   0x000000
-       .idata_fxm3232.o_i    romdata   0x002857    program   0x000000
-       .romdata_fxm3232.o    romdata   0x002857    program   0x000000
-        .idata_t1open.o_i    romdata   0x002857    program   0x000000
-        .romdata_t1open.o    romdata   0x002857    program   0x000000
-        .romdata___init.o    romdata   0x002857    program   0x000000
-        .idata___init.o_i    romdata   0x002857    program   0x000000
-         .romdata_udefs.o    romdata   0x002857    program   0x000000
-         .idata_udefs.o_i    romdata   0x002857    program   0x000000
-         .romdata_uread.o    romdata   0x002857    program   0x000000
-         .idata_uopen.o_i    romdata   0x002857    program   0x000000
-         .romdata_uopen.o    romdata   0x002857    program   0x000000
-         .idata_uread.o_i    romdata   0x002857    program   0x000000
-         .idata_c018i.o_i    romdata   0x002857    program   0x000000
-         .romdata_c018i.o    romdata   0x002857    program   0x000000
-.idata_usb_descriptors.o_i    romdata   0x002857    program   0x000000
-            .code_c018i.o       code   0x002858    program   0x000000
-            .code_udefs.o       code   0x002858    program   0x000000
-  .code_usb_descriptors.o       code   0x002858    program   0x000000
- .code_usb_function_hid.o       code   0x002858    program   0x0000c2
-               _cinit_scn       code   0x00291a    program   0x00009e
-            .code_uopen.o       code   0x0029b8    program   0x00008a
-          .code_fxm3232.o       code   0x002a42    program   0x000070
-           .code_t1open.o       code   0x002ab2    program   0x000042
-            .code_uread.o       code   0x002af4    program   0x00003e
-                   STRING       code   0x002b32    program   0x000034
-                    .code       code   0x002b66    program   0x000020
-             _startup_scn       code   0x002b86    program   0x00001c
-          .romdata_main.o    romdata   0x002ba2    program   0x000008
-           .code___init.o       code   0x002baa    program   0x000002
-          .idata_main.o_i    romdata   0x002bac    program   0x000021
+             .code_main.o       code   0x001038    program   0x000d46
+       .code_usb_device.o       code   0x001d7e    program   0x000cf2
+.romdata_usb_descriptors.o    romdata   0x002a70    program   0x0000c5
+    .idata_usb_device.o_i    romdata   0x002b35    program   0x000000
+    .romdata_usb_device.o    romdata   0x002b35    program   0x000000
+.idata_usb_function_hid.o_i    romdata   0x002b35    program   0x000000
+.romdata_usb_function_hid.o    romdata   0x002b35    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x002b35    program   0x000000
+       .romdata_fxm3232.o    romdata   0x002b35    program   0x000000
+        .idata_t1open.o_i    romdata   0x002b35    program   0x000000
+        .romdata_t1open.o    romdata   0x002b35    program   0x000000
+        .romdata___init.o    romdata   0x002b35    program   0x000000
+        .idata___init.o_i    romdata   0x002b35    program   0x000000
+         .romdata_udefs.o    romdata   0x002b35    program   0x000000
+         .idata_udefs.o_i    romdata   0x002b35    program   0x000000
+         .romdata_uread.o    romdata   0x002b35    program   0x000000
+         .idata_uopen.o_i    romdata   0x002b35    program   0x000000
+         .romdata_uopen.o    romdata   0x002b35    program   0x000000
+         .idata_uread.o_i    romdata   0x002b35    program   0x000000
+         .idata_c018i.o_i    romdata   0x002b35    program   0x000000
+         .romdata_c018i.o    romdata   0x002b35    program   0x000000
+.idata_usb_descriptors.o_i    romdata   0x002b35    program   0x000000
+            .code_c018i.o       code   0x002b36    program   0x000000
+            .code_udefs.o       code   0x002b36    program   0x000000
+  .code_usb_descriptors.o       code   0x002b36    program   0x000000
+ .code_usb_function_hid.o       code   0x002b36    program   0x0000c2
+               _cinit_scn       code   0x002bf8    program   0x00009e
+            .code_uopen.o       code   0x002c96    program   0x00008a
+          .code_fxm3232.o       code   0x002d20    program   0x000070
+           .code_t1open.o       code   0x002d90    program   0x000042
+            .code_uread.o       code   0x002dd2    program   0x00003e
+                   STRING       code   0x002e10    program   0x000034
+                    .code       code   0x002e44    program   0x000020
+             _startup_scn       code   0x002e64    program   0x00001c
+          .romdata_main.o    romdata   0x002e80    program   0x000008
+           .code___init.o       code   0x002e88    program   0x000002
+          .idata_main.o_i    romdata   0x002e8a    program   0x000022
     .config_300000_main.o    romdata   0x300000    program   0x000001
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300002_main.o    romdata   0x300002    program   0x000001
@@ -65,31 +65,31 @@ REMAPPED_LOW_INTERRUPT_VECTOR       code   0x001018    program   0x000006
                 MATH_DATA      udata   0x000000       data   0x000010
                  .tmpdata      udata   0x000010       data   0x000004
       .udata_usb_device.o      udata   0x000060       data   0x00002e
-            .idata_main.o      idata   0x00008e       data   0x000021
-            .udata_main.o      udata   0x0000af       data   0x000017
-           .udata_c018i.o      udata   0x0000c6       data   0x00000a
-.udata_usb_function_hid.o      udata   0x0000d0       data   0x000002
-           .udata_udefs.o      udata   0x0000d2       data   0x000001
-           .idata_udefs.o      idata   0x0000d3       data   0x000000
-           .idata_uread.o      idata   0x0000d3       data   0x000000
-          .udata___init.o      udata   0x0000d3       data   0x000000
-           .udata_uread.o      udata   0x0000d3       data   0x000000
-           .idata_uopen.o      idata   0x0000d3       data   0x000000
-          .idata___init.o      idata   0x0000d3       data   0x000000
-           .udata_uopen.o      udata   0x0000d3       data   0x000000
-          .idata_t1open.o      idata   0x0000d3       data   0x000000
-          .udata_t1open.o      udata   0x0000d3       data   0x000000
-         .idata_fxm3232.o      idata   0x0000d3       data   0x000000
-         .udata_fxm3232.o      udata   0x0000d3       data   0x000000
-.idata_usb_function_hid.o      idata   0x0000d3       data   0x000000
-      .idata_usb_device.o      idata   0x0000d3       data   0x000000
-               USB_BUFFER      udata   0x0000d3       data   0x000000
- .idata_usb_descriptors.o      idata   0x0000d3       data   0x000000
- .udata_usb_descriptors.o      udata   0x0000d3       data   0x000000
-           .idata_c018i.o      idata   0x0000d3       data   0x000000
+            .idata_main.o      idata   0x00008e       data   0x000022
+            .udata_main.o      udata   0x0000b0       data   0x000017
+           .udata_c018i.o      udata   0x0000c7       data   0x00000a
+.udata_usb_function_hid.o      udata   0x0000d1       data   0x000002
+           .udata_udefs.o      udata   0x0000d3       data   0x000001
+           .idata_udefs.o      idata   0x0000d4       data   0x000000
+           .idata_uread.o      idata   0x0000d4       data   0x000000
+          .udata___init.o      udata   0x0000d4       data   0x000000
+           .udata_uread.o      udata   0x0000d4       data   0x000000
+           .idata_uopen.o      idata   0x0000d4       data   0x000000
+          .idata___init.o      idata   0x0000d4       data   0x000000
+           .udata_uopen.o      udata   0x0000d4       data   0x000000
+          .idata_t1open.o      idata   0x0000d4       data   0x000000
+          .udata_t1open.o      udata   0x0000d4       data   0x000000
+         .idata_fxm3232.o      idata   0x0000d4       data   0x000000
+         .udata_fxm3232.o      udata   0x0000d4       data   0x000000
+.idata_usb_function_hid.o      idata   0x0000d4       data   0x000000
+      .idata_usb_device.o      idata   0x0000d4       data   0x000000
+               USB_BUFFER      udata   0x0000d4       data   0x000000
+ .idata_usb_descriptors.o      idata   0x0000d4       data   0x000000
+ .udata_usb_descriptors.o      udata   0x0000d4       data   0x000000
+           .idata_c018i.o      idata   0x0000d4       data   0x000000
                    .stack      udata   0x000300       data   0x000100
                   USB_BDT      udata   0x000400       data   0x000030
-                 USB_VARS      udata   0x000430       data   0x000240
+                 USB_VARS      udata   0x000430       data   0x000280
             SFR_UNBANKED0      udata   0x000f62       data   0x00009e
 
 
@@ -102,80 +102,80 @@ REMAPPED_LOW_INTERRUPT_VECTOR       code   0x001018    program   0x000006
                             0x000018    0x00001d      
                             0x001000    0x00100d      
                             0x001016    0x00101d      
-                            0x00102a    0x002856      
-                            0x002858    0x002bcc      
+                            0x00102a    0x002b34      
+                            0x002b36    0x002eab      
                             0x300000    0x300003      
                             0x300005    0x300006      
                             0x300008    0x30000d      
-            7126 out of 33048 program addresses used, program memory utilization is 21%
+            7861 out of 33048 program addresses used, program memory utilization is 23%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-              Address_MUX   0x002676    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+              Address_MUX   0x001c62    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                AppVersion   0x001016    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-           Backplane_Comm   0x001f36    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                  FXM3232   0x002a42    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+           Backplane_Comm   0x001264    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                  FXM3232   0x002d20    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
                  High_ISR   0x000008    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-         InitializeSystem   0x002376    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+         InitializeSystem   0x00197e    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                   Low_ISR   0x000018    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-              MTC_machine   0x00209a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-               OpenTimer1   0x002ab2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
-                OpenUSART   0x0029b8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-                ProcessIO   0x0023d4    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                ReadUSART   0x002af4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uread.c
+              MTC_machine   0x0016a2    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+               OpenTimer1   0x002d90    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
+                OpenUSART   0x002c96    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+                ProcessIO   0x0019dc    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                ReadUSART   0x002dd2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uread.c
         Remapped_High_ISR   0x001008    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
          Remapped_Low_ISR   0x001018    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
      SignaturePlaceholder   0x001006    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-       USBCBCheckOtherReq   0x0026a2    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-        USBCBErrorHandler   0x0026a0    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-              USBCBInitEP   0x0026a8    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-          USBCBSendResume   0x0026ba    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-    USBCBStdSetDscHandler   0x0026a6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-             USBCBSuspend   0x00269a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-     USBCBWakeFromSuspend   0x00269c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-        USBCB_SOF_Handler   0x00269e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-              USBCancelIO   0x001336    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-       USBCheckHIDRequest   0x002858    program     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
-       USBCheckStdRequest   0x0018f6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-     USBConfigureEndpoint   0x0013f4    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-  USBCtrlEPAllowDataStage   0x0013b6    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-USBCtrlEPAllowStatusStage   0x00136a    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-         USBCtrlEPService   0x0017a0    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
- USBCtrlEPServiceComplete   0x001450    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-      USBCtrlTrfInHandler   0x001882    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-     USBCtrlTrfOutHandler   0x001864    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-      USBCtrlTrfRxService   0x00152a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-   USBCtrlTrfSetupHandler   0x00182e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-      USBCtrlTrfTxService   0x0014aa    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-            USBDeviceInit   0x001038    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-           USBDeviceTasks   0x0010fc    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-        USBEnableEndpoint   0x001232    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-         USBStallEndpoint   0x001306    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-          USBStallHandler   0x001754    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-  USBStdFeatureReqHandler   0x00199e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-      USBStdGetDscHandler   0x001664    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-   USBStdGetStatusHandler   0x0016de    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-      USBStdSetCfgHandler   0x0015f2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-               USBSuspend   0x001774    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-     USBTransferOnePacket   0x00127a    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-       USBWakeFromSuspend   0x001788    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-               USB_CD_Ptr   0x00284f    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-               USB_SD_Ptr   0x002851    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-USER_USB_CALLBACK_EVENT_HANDLER   0x0026fe    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                 UserInit   0x002394    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-  YourHighPriorityISRCode   0x001d2a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-   YourLowPriorityISRCode   0x001e4a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-              _2jContinue   0x002b52    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
-                   _3jEnd   0x002b5c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
+       USBCBCheckOtherReq   0x001c8e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+        USBCBErrorHandler   0x001c8c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+              USBCBInitEP   0x001c94    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+          USBCBSendResume   0x001ca6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+    USBCBStdSetDscHandler   0x001c92    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+             USBCBSuspend   0x001c86    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+     USBCBWakeFromSuspend   0x001c88    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+        USBCB_SOF_Handler   0x001c8a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+              USBCancelIO   0x00207c    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+       USBCheckHIDRequest   0x002b36    program     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
+       USBCheckStdRequest   0x00263c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBConfigureEndpoint   0x00213a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+  USBCtrlEPAllowDataStage   0x0020fc    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+USBCtrlEPAllowStatusStage   0x0020b0    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+         USBCtrlEPService   0x0024e6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+ USBCtrlEPServiceComplete   0x002196    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfInHandler   0x0025c8    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBCtrlTrfOutHandler   0x0025aa    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfRxService   0x002270    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+   USBCtrlTrfSetupHandler   0x002574    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfTxService   0x0021f0    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+            USBDeviceInit   0x001d7e    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+           USBDeviceTasks   0x001e42    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+        USBEnableEndpoint   0x001f78    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+         USBStallEndpoint   0x00204c    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+          USBStallHandler   0x00249a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+  USBStdFeatureReqHandler   0x0026e4    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBStdGetDscHandler   0x0023aa    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+   USBStdGetStatusHandler   0x002424    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBStdSetCfgHandler   0x002338    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+               USBSuspend   0x0024ba    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBTransferOnePacket   0x001fc0    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+       USBWakeFromSuspend   0x0024ce    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+               USB_CD_Ptr   0x002b2d    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+               USB_SD_Ptr   0x002b2f    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+USER_USB_CALLBACK_EVENT_HANDLER   0x001cea    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                 UserInit   0x00199c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+  YourHighPriorityISRCode   0x001038    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+   YourLowPriorityISRCode   0x001182    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+              _2jContinue   0x002e30    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
+                   _3jEnd   0x002e3a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
        ___return_lbl00000   0x00000c    program     static                          
-       ___return_lbl00000   0x002ab0    program     static                          
+       ___return_lbl00000   0x002d8e    program     static                          
        ___return_lbl00000   0x000004    program     static                          
        ___return_lbl00001   0x00001c    program     static                          
-       ___return_lbl00001   0x002ba0    program     static                          
-       ___return_lbl00002   0x0029b6    program     static                          
+       ___return_lbl00001   0x002e7e    program     static                          
+       ___return_lbl00002   0x002c94    program     static                          
        ___return_lbl00002   0x001004    program     static                          
        ___return_lbl00003   0x00100c    program     static                          
        ___return_lbl00004   0x00101c    program     static                          
@@ -191,87 +191,87 @@ USER_USB_CALLBACK_EVENT_HANDLER   0x0026fe    program     extern C:\Users\KBV\De
                __config_7   0x300009    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                __config_8   0x30000a    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                __config_9   0x30000b    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                   __init   0x002baa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-                   __pa_0   0x001ac8    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_1   0x001ad0    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_10   0x001b2e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_11   0x001b3e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_12   0x001b48    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_13   0x001b5c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_14   0x001b70    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_15   0x001b7c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_16   0x001b96    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_17   0x001ba2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_18   0x001bae    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_19   0x001bb6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_2   0x001ada    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_20   0x001bbe    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_21   0x001bca    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_22   0x001bda    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_23   0x001bea    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_24   0x001bf8    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_25   0x001c06    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_26   0x001c14    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_27   0x001c22    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_28   0x001c30    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_29   0x001c3a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_3   0x001ae2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_30   0x001c44    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_31   0x001c5c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_32   0x001c68    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_33   0x001c70    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_34   0x001c84    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_35   0x001c92    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_36   0x001c9c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_37   0x001ca6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_38   0x001cac    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_39   0x001cb4    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_4   0x001aec    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_40   0x001cc0    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_41   0x001cc6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_42   0x001cd4    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_43   0x001ce2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_44   0x001cf0    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_45   0x001cfa    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_46   0x001d04    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_47   0x001d0c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_48   0x001d18    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_49   0x001d22    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_5   0x001af6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_6   0x001b00    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_7   0x001b08    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_8   0x001b18    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_9   0x001b22    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-              __tmplbl_24   0x001b00    program     static                          
-              __tmplbl_34   0x001b00    program     static                          
-              __tmplbl_37   0x001b00    program     static                          
-              __tmplbl_38   0x001b00    program     static                          
-            __zero_memory   0x002b66    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                _do_cinit   0x00291a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   __init   0x002e88    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                   __pa_0   0x00280e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_1   0x002816    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_10   0x002874    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_11   0x002884    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_12   0x00288e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_13   0x0028a2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_14   0x0028b6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_15   0x0028c2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_16   0x0028dc    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_17   0x0028e8    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_18   0x0028f4    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_19   0x0028fc    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_2   0x002820    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_20   0x002904    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_21   0x002910    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_22   0x002920    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_23   0x002930    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_24   0x00293e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_25   0x00294c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_26   0x00295a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_27   0x002968    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_28   0x002976    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_29   0x002980    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_3   0x002828    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_30   0x00298a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_31   0x0029a2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_32   0x0029ae    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_33   0x0029b6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_34   0x0029ca    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_35   0x0029d8    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_36   0x0029e2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_37   0x0029ec    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_38   0x0029f2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_39   0x0029fa    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_4   0x002832    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_40   0x002a06    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_41   0x002a0c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_42   0x002a1a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_43   0x002a28    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_44   0x002a36    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_45   0x002a40    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_46   0x002a4a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_47   0x002a52    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_48   0x002a5e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_49   0x002a68    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_5   0x00283c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_6   0x002846    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_7   0x00284e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_8   0x00285e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_9   0x002868    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+              __tmplbl_24   0x002846    program     static                          
+              __tmplbl_34   0x002846    program     static                          
+              __tmplbl_37   0x002846    program     static                          
+              __tmplbl_38   0x002846    program     static                          
+            __zero_memory   0x002e44    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                _do_cinit   0x002bf8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _reset   0x001000    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                 _startup   0x002b86    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x002b7c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-        configDescriptor1   0x0027a4    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-                copy_loop   0x00298c    program     static                          
-            copy_one_byte   0x002992    program     static                          
-               device_dsc   0x002792    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-                dir_table   0x002ba2    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                     done   0x0029b6    program     static                          
-             done_copying   0x0029a0    program     static                          
-                hid_rpt01   0x002833    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-                     jEnd   0x002b64    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
-                    jLoop   0x002b46    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
-                     loop   0x002b96    program     static                          
-                   loop_h   0x002b74    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_l   0x002b7e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     main   0x001e6c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                   memset   0x002b32    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
-                    sd000   0x0027cd    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-                    sd001   0x0027d1    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-                    sd002   0x002805    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-                     test   0x002934    program     static                          
-               zero_block   0x002b74    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 _startup   0x002e64    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x002e5a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+        configDescriptor1   0x002a82    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+                copy_loop   0x002c6a    program     static                          
+            copy_one_byte   0x002c70    program     static                          
+               device_dsc   0x002a70    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+                dir_table   0x002e80    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                     done   0x002c94    program     static                          
+             done_copying   0x002c7e    program     static                          
+                hid_rpt01   0x002b11    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+                     jEnd   0x002e42    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
+                    jLoop   0x002e24    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
+                     loop   0x002e74    program     static                          
+                   loop_h   0x002e52    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_l   0x002e5c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     main   0x0011a4    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                   memset   0x002e10    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
+                    sd000   0x002aab    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+                    sd001   0x002aaf    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+                    sd002   0x002ae3    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+                     test   0x002c12    program     static                          
+               zero_block   0x002e52    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON0   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                ADCON0bits   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON1   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -281,7 +281,7 @@ USER_USB_CALLBACK_EVENT_HANDLER   0x0026fe    program     extern C:\Users\KBV\De
                     ADRES   0x000fc3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADRESH   0x000fc4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADRESL   0x000fc3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-           BACKPLANE_FLAG   0x0000ae       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+           BACKPLANE_FLAG   0x0000af       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                   BAUDCON   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               BAUDCONbits   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   BAUDCTL   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -319,7 +319,7 @@ USER_USB_CALLBACK_EVENT_HANDLER   0x0026fe    program     extern C:\Users\KBV\De
                  DDRDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  DDREbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-              DIGIT_MASKS   0x0000ba       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+              DIGIT_MASKS   0x0000bb       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                   ECCP1AS   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               ECCP1ASbits   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  ECCP1CON   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -359,6 +359,7 @@ USER_USB_CALLBACK_EVENT_HANDLER   0x0026fe    program     extern C:\Users\KBV\De
                  IPR1bits   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      IPR2   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  IPR2bits   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     Idle   0x0000ae       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                      LATA   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  LATAbits   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      LATB   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -371,8 +372,8 @@ USER_USB_CALLBACK_EVENT_HANDLER   0x0026fe    program     extern C:\Users\KBV\De
                  LATEbits   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    LVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                LVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     MIDI   0x0000bf       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                      MTC   0x0000af       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                     MIDI   0x0000c0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                      MTC   0x0000b0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                  MTC_flag   0x00008f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
               MTC_q_frame   0x00008e       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                MTClongEXT   0x000094       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
@@ -488,6 +489,7 @@ USER_USB_CALLBACK_EVENT_HANDLER   0x0026fe    program     extern C:\Users\KBV\De
                     TXREG   0x000fad       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TXSTA   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 TXSTAbits   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   TempIn   0x000670       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                     UADDR   0x000f6e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 UADDRbits   0x000f6e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UCFG   0x000f6f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -539,7 +541,7 @@ USER_USB_CALLBACK_EVENT_HANDLER   0x0026fe    program     extern C:\Users\KBV\De
                   UIEbits   0x000f69       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                       UIR   0x000f68       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   UIRbits   0x000f68       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-             USART_Status   0x0000d2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\udefs.c
+             USART_Status   0x0000d3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\udefs.c
    USBActiveConfiguration   0x000061       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
     USBAlternateInterface   0x000062       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
         USBBusIsSuspended   0x000080       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
@@ -581,38 +583,38 @@ USBStatusStageTimeoutCounter   0x000088       data     extern C:\Microchip Solut
                   __tmp_0   0x000010       data     static C:\Microchip Solutions\Microchip\USB\usb_device.c
                   __tmp_0   0x000010       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
                   __tmp_0   0x000010       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-          active_protocol   0x0000d1       data     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
+          active_protocol   0x0000d2       data     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
                  armClock   0x000092       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
          blinkStatusValid   0x0000a6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                   buffer   0x0000b4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                   buffer   0x0000b5       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
      controlTransferState   0x000070       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-                curr_byte   0x0000c9       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x0000cb       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 data_ptr   0x0000cd       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-              delay_count   0x0000c4       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-             emulate_mode   0x0000b2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                curr_byte   0x0000ca       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x0000cc       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x0000ce       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+              delay_count   0x0000c5       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+             emulate_mode   0x0000b3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
           endpoint_number   0x000082       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
                ep_data_in   0x000084       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
               ep_data_out   0x000086       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-                idle_rate   0x0000d0       data     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
+                idle_rate   0x0000d1       data     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
                   inPipes   0x000071       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
          lastTransmission   0x0000a8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
             load_USB_flag   0x000091       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-          movement_length   0x0000b3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+          movement_length   0x0000b4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
               mtcIdleCntr   0x0000aa       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                mtcObject   0x0000c0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                  old_sw2   0x0000b0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                  old_sw3   0x0000b1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                mtcObject   0x0000c1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                  old_sw2   0x0000b1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                  old_sw3   0x0000b2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                  outPipes   0x000076       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
    pBDTEntryEP0OutCurrent   0x000063       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
       pBDTEntryEP0OutNext   0x000065       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
               pBDTEntryIn   0x00006b       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
              pBDTEntryOut   0x000067       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
                      pDst   0x00007d       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-                     prom   0x0000c6       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     prom   0x0000c7       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
         shortPacketStatus   0x00006f       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-                     test   0x0000b9       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                 timercnt   0x0000b7       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                     test   0x0000ba       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                 timercnt   0x0000b8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                    usb_in   0x000430       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                   usb_out   0x000530       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                    vector   0x0000a7       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
@@ -636,138 +638,138 @@ USBStatusStageTimeoutCounter   0x000088       data     extern C:\Microchip Solut
                AppVersion   0x001016    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
          Remapped_Low_ISR   0x001018    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
        ___return_lbl00004   0x00101c    program     static                          
-            USBDeviceInit   0x001038    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-           USBDeviceTasks   0x0010fc    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-        USBEnableEndpoint   0x001232    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-     USBTransferOnePacket   0x00127a    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-         USBStallEndpoint   0x001306    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-              USBCancelIO   0x001336    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-USBCtrlEPAllowStatusStage   0x00136a    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-  USBCtrlEPAllowDataStage   0x0013b6    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
-     USBConfigureEndpoint   0x0013f4    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
- USBCtrlEPServiceComplete   0x001450    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-      USBCtrlTrfTxService   0x0014aa    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-      USBCtrlTrfRxService   0x00152a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-      USBStdSetCfgHandler   0x0015f2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-      USBStdGetDscHandler   0x001664    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-   USBStdGetStatusHandler   0x0016de    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-          USBStallHandler   0x001754    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-               USBSuspend   0x001774    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-       USBWakeFromSuspend   0x001788    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-         USBCtrlEPService   0x0017a0    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-   USBCtrlTrfSetupHandler   0x00182e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-     USBCtrlTrfOutHandler   0x001864    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-      USBCtrlTrfInHandler   0x001882    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-       USBCheckStdRequest   0x0018f6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-  USBStdFeatureReqHandler   0x00199e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_0   0x001ac8    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_1   0x001ad0    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_2   0x001ada    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_3   0x001ae2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_4   0x001aec    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_5   0x001af6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-              __tmplbl_38   0x001b00    program     static                          
-              __tmplbl_37   0x001b00    program     static                          
-              __tmplbl_34   0x001b00    program     static                          
-              __tmplbl_24   0x001b00    program     static                          
-                   __pa_6   0x001b00    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_7   0x001b08    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_8   0x001b18    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                   __pa_9   0x001b22    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_10   0x001b2e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_11   0x001b3e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_12   0x001b48    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_13   0x001b5c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_14   0x001b70    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_15   0x001b7c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_16   0x001b96    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_17   0x001ba2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_18   0x001bae    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_19   0x001bb6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_20   0x001bbe    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_21   0x001bca    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_22   0x001bda    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_23   0x001bea    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_24   0x001bf8    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_25   0x001c06    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_26   0x001c14    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_27   0x001c22    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_28   0x001c30    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_29   0x001c3a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_30   0x001c44    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_31   0x001c5c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_32   0x001c68    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_33   0x001c70    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_34   0x001c84    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_35   0x001c92    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_36   0x001c9c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_37   0x001ca6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_38   0x001cac    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_39   0x001cb4    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_40   0x001cc0    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_41   0x001cc6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_42   0x001cd4    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_43   0x001ce2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_44   0x001cf0    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_45   0x001cfa    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_46   0x001d04    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_47   0x001d0c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_48   0x001d18    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-                  __pa_49   0x001d22    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
-  YourHighPriorityISRCode   0x001d2a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-   YourLowPriorityISRCode   0x001e4a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                     main   0x001e6c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-           Backplane_Comm   0x001f36    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-              MTC_machine   0x00209a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-         InitializeSystem   0x002376    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                 UserInit   0x002394    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                ProcessIO   0x0023d4    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-              Address_MUX   0x002676    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-             USBCBSuspend   0x00269a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-     USBCBWakeFromSuspend   0x00269c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-        USBCB_SOF_Handler   0x00269e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-        USBCBErrorHandler   0x0026a0    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-       USBCBCheckOtherReq   0x0026a2    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-    USBCBStdSetDscHandler   0x0026a6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-              USBCBInitEP   0x0026a8    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-          USBCBSendResume   0x0026ba    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-USER_USB_CALLBACK_EVENT_HANDLER   0x0026fe    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-               device_dsc   0x002792    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-        configDescriptor1   0x0027a4    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-                    sd000   0x0027cd    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-                    sd001   0x0027d1    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-                    sd002   0x002805    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-                hid_rpt01   0x002833    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-               USB_CD_Ptr   0x00284f    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-               USB_SD_Ptr   0x002851    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
-       USBCheckHIDRequest   0x002858    program     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
-                _do_cinit   0x00291a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x002934    program     static                          
-                copy_loop   0x00298c    program     static                          
-            copy_one_byte   0x002992    program     static                          
-             done_copying   0x0029a0    program     static                          
-       ___return_lbl00002   0x0029b6    program     static                          
-                     done   0x0029b6    program     static                          
-                OpenUSART   0x0029b8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-                  FXM3232   0x002a42    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
-       ___return_lbl00000   0x002ab0    program     static                          
-               OpenTimer1   0x002ab2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
-                ReadUSART   0x002af4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uread.c
-                   memset   0x002b32    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
-                    jLoop   0x002b46    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
-              _2jContinue   0x002b52    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
-                   _3jEnd   0x002b5c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
-                     jEnd   0x002b64    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
-            __zero_memory   0x002b66    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_h   0x002b74    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               zero_block   0x002b74    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                compare_l   0x002b7c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_l   0x002b7e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 _startup   0x002b86    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x002b96    program     static                          
-       ___return_lbl00001   0x002ba0    program     static                          
-                dir_table   0x002ba2    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                   __init   0x002baa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+  YourHighPriorityISRCode   0x001038    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+   YourLowPriorityISRCode   0x001182    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                     main   0x0011a4    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+           Backplane_Comm   0x001264    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+              MTC_machine   0x0016a2    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+         InitializeSystem   0x00197e    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                 UserInit   0x00199c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                ProcessIO   0x0019dc    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+              Address_MUX   0x001c62    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+             USBCBSuspend   0x001c86    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+     USBCBWakeFromSuspend   0x001c88    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+        USBCB_SOF_Handler   0x001c8a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+        USBCBErrorHandler   0x001c8c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+       USBCBCheckOtherReq   0x001c8e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+    USBCBStdSetDscHandler   0x001c92    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+              USBCBInitEP   0x001c94    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+          USBCBSendResume   0x001ca6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+USER_USB_CALLBACK_EVENT_HANDLER   0x001cea    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+            USBDeviceInit   0x001d7e    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+           USBDeviceTasks   0x001e42    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+        USBEnableEndpoint   0x001f78    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBTransferOnePacket   0x001fc0    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+         USBStallEndpoint   0x00204c    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+              USBCancelIO   0x00207c    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+USBCtrlEPAllowStatusStage   0x0020b0    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+  USBCtrlEPAllowDataStage   0x0020fc    program     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBConfigureEndpoint   0x00213a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+ USBCtrlEPServiceComplete   0x002196    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfTxService   0x0021f0    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfRxService   0x002270    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBStdSetCfgHandler   0x002338    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBStdGetDscHandler   0x0023aa    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+   USBStdGetStatusHandler   0x002424    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+          USBStallHandler   0x00249a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+               USBSuspend   0x0024ba    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+       USBWakeFromSuspend   0x0024ce    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+         USBCtrlEPService   0x0024e6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+   USBCtrlTrfSetupHandler   0x002574    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+     USBCtrlTrfOutHandler   0x0025aa    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+      USBCtrlTrfInHandler   0x0025c8    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+       USBCheckStdRequest   0x00263c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+  USBStdFeatureReqHandler   0x0026e4    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_0   0x00280e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_1   0x002816    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_2   0x002820    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_3   0x002828    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_4   0x002832    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_5   0x00283c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_6   0x002846    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+              __tmplbl_24   0x002846    program     static                          
+              __tmplbl_34   0x002846    program     static                          
+              __tmplbl_37   0x002846    program     static                          
+              __tmplbl_38   0x002846    program     static                          
+                   __pa_7   0x00284e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_8   0x00285e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                   __pa_9   0x002868    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_10   0x002874    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_11   0x002884    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_12   0x00288e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_13   0x0028a2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_14   0x0028b6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_15   0x0028c2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_16   0x0028dc    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_17   0x0028e8    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_18   0x0028f4    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_19   0x0028fc    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_20   0x002904    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_21   0x002910    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_22   0x002920    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_23   0x002930    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_24   0x00293e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_25   0x00294c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_26   0x00295a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_27   0x002968    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_28   0x002976    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_29   0x002980    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_30   0x00298a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_31   0x0029a2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_32   0x0029ae    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_33   0x0029b6    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_34   0x0029ca    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_35   0x0029d8    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_36   0x0029e2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_37   0x0029ec    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_38   0x0029f2    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_39   0x0029fa    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_40   0x002a06    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_41   0x002a0c    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_42   0x002a1a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_43   0x002a28    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_44   0x002a36    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_45   0x002a40    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_46   0x002a4a    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_47   0x002a52    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_48   0x002a5e    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+                  __pa_49   0x002a68    program     static C:\Microchip Solutions\Microchip\USB\usb_device.c
+               device_dsc   0x002a70    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+        configDescriptor1   0x002a82    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+                    sd000   0x002aab    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+                    sd001   0x002aaf    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+                    sd002   0x002ae3    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+                hid_rpt01   0x002b11    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+               USB_CD_Ptr   0x002b2d    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+               USB_SD_Ptr   0x002b2f    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\usb_descriptors.c
+       USBCheckHIDRequest   0x002b36    program     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
+                _do_cinit   0x002bf8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x002c12    program     static                          
+                copy_loop   0x002c6a    program     static                          
+            copy_one_byte   0x002c70    program     static                          
+             done_copying   0x002c7e    program     static                          
+                     done   0x002c94    program     static                          
+       ___return_lbl00002   0x002c94    program     static                          
+                OpenUSART   0x002c96    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+                  FXM3232   0x002d20    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x002d8e    program     static                          
+               OpenTimer1   0x002d90    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t1open.c
+                ReadUSART   0x002dd2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uread.c
+                   memset   0x002e10    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
+                    jLoop   0x002e24    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
+              _2jContinue   0x002e30    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
+                   _3jEnd   0x002e3a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
+                     jEnd   0x002e42    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\memset.asm
+            __zero_memory   0x002e44    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               zero_block   0x002e52    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_h   0x002e52    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                compare_l   0x002e5a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_l   0x002e5c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 _startup   0x002e64    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x002e74    program     static                          
+       ___return_lbl00001   0x002e7e    program     static                          
+                dir_table   0x002e80    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                   __init   0x002e88    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                __config_0   0x300000    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                __config_1   0x300001    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                __config_2   0x300002    program     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
@@ -784,8 +786,8 @@ USER_USB_CALLBACK_EVENT_HANDLER   0x0026fe    program     extern C:\Users\KBV\De
                  __AARGB7   0x000000       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB2   0x000001       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB6   0x000001       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB1   0x000002       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB5   0x000002       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x000002       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB0   0x000003       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB4   0x000003       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB3   0x000004       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
@@ -801,8 +803,8 @@ USER_USB_CALLBACK_EVENT_HANDLER   0x0026fe    program     extern C:\Users\KBV\De
                      SIGN   0x00000e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                 __FPFLAGS   0x00000f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
             __FPFLAGSbits   0x00000f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                  __tmp_0   0x000010       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                   __tmp_0   0x000010       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+                  __tmp_0   0x000010       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                   __tmp_0   0x000010       data     static C:\Microchip Solutions\Microchip\USB\usb_device.c
            USBDeviceState   0x000060       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
    USBActiveConfiguration   0x000061       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
@@ -848,50 +850,52 @@ USBDeferOUTDataStagePackets   0x00008d       data     extern C:\Microchip Soluti
               mtcIdleCntr   0x0000aa       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                  FakeTick   0x0000ac       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                RUN_STATUS   0x0000ad       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-           BACKPLANE_FLAG   0x0000ae       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                      MTC   0x0000af       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                  old_sw2   0x0000b0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                  old_sw3   0x0000b1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-             emulate_mode   0x0000b2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-          movement_length   0x0000b3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                   buffer   0x0000b4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                 timercnt   0x0000b7       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                     test   0x0000b9       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-              DIGIT_MASKS   0x0000ba       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                     MIDI   0x0000bf       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                mtcObject   0x0000c0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-              delay_count   0x0000c4       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
-                     prom   0x0000c6       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                curr_byte   0x0000c9       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x0000cb       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 data_ptr   0x0000cd       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                idle_rate   0x0000d0       data     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
-          active_protocol   0x0000d1       data     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
-             USART_Status   0x0000d2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\udefs.c
+                     Idle   0x0000ae       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+           BACKPLANE_FLAG   0x0000af       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                      MTC   0x0000b0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                  old_sw2   0x0000b1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                  old_sw3   0x0000b2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+             emulate_mode   0x0000b3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+          movement_length   0x0000b4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                   buffer   0x0000b5       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                 timercnt   0x0000b8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                     test   0x0000ba       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+              DIGIT_MASKS   0x0000bb       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                     MIDI   0x0000c0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                mtcObject   0x0000c1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+              delay_count   0x0000c5       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                     prom   0x0000c7       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                curr_byte   0x0000ca       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x0000cc       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x0000ce       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                idle_rate   0x0000d1       data     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
+          active_protocol   0x0000d2       data     extern C:\Microchip Solutions\Microchip\USB\HID Device Driver\usb_function_hid.c
+             USART_Status   0x0000d3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\USART\udefs.c
                       BDT   0x000400       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
                  SetupPkt   0x000420       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
               CtrlTrfData   0x000428       data     extern C:\Microchip Solutions\Microchip\USB\usb_device.c
                    usb_in   0x000430       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                   usb_out   0x000530       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                  TEMP_BUF   0x000630       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
+                   TempIn   0x000670       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4550 BackPlane USB\2013-11-05\main.c
                   SPPDATA   0x000f62       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    SPPCFG   0x000f63       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                SPPCFGbits   0x000f63       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               SPPEPSbits   0x000f64       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    SPPEPS   0x000f64       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               SPPCONbits   0x000f65       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               SPPEPSbits   0x000f64       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    SPPCON   0x000f65       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    UFRML   0x000f66       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               SPPCONbits   0x000f65       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 UFRMLbits   0x000f66       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    UFRML   0x000f66       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UFRM   0x000f66       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 UFRMHbits   0x000f67       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     UFRMH   0x000f67       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                      UIR   0x000f68       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   UIRbits   0x000f68       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                  UIEbits   0x000f69       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                      UIR   0x000f68       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                       UIE   0x000f69       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     UEIR   0x000f6a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                  UIEbits   0x000f69       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEIRbits   0x000f6a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     UEIR   0x000f6a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEIEbits   0x000f6b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEIE   0x000f6b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 USTATbits   0x000f6c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -900,18 +904,18 @@ USBDeferOUTDataStagePackets   0x00008d       data     extern C:\Microchip Soluti
                      UCON   0x000f6d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     UADDR   0x000f6e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 UADDRbits   0x000f6e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     UCFG   0x000f6f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UCFGbits   0x000f6f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     UCFG   0x000f6f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP0   0x000f70       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP0bits   0x000f70       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     UEP1   0x000f71       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP1bits   0x000f71       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     UEP1   0x000f71       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP2   0x000f72       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP2bits   0x000f72       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP3   0x000f73       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP3bits   0x000f73       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 UEP4bits   0x000f74       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP4   0x000f74       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 UEP4bits   0x000f74       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  UEP5bits   0x000f75       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP5   0x000f75       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      UEP6   0x000f76       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -954,61 +958,61 @@ USBDeferOUTDataStagePackets   0x00008d       data     extern C:\Microchip Soluti
                  LATDbits   0x000f8c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      LATE   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  LATEbits   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    TRISA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  DDRAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    TRISA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 TRISAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 DDRBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TRISB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 TRISBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 DDRBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    TRISC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 TRISCbits   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    TRISC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  DDRCbits   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TRISD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 TRISDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  DDRDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    TRISE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                TRISEbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  DDREbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                  OSCTUNE   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                TRISEbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    TRISE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               OSCTUNEbits   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     PIE1   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                  OSCTUNE   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  PIE1bits   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     PIE1   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  PIR1bits   0x000f9e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      PIR1   0x000f9e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  IPR1bits   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      IPR1   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 PIE2bits   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      PIE2   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     PIR2   0x000fa1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 PIE2bits   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  PIR2bits   0x000fa1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     PIR2   0x000fa1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  IPR2bits   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      IPR2   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               EECON1bits   0x000fa6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    EECON1   0x000fa6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               EECON1bits   0x000fa6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    EECON2   0x000fa7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    EEDATA   0x000fa8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     EEADR   0x000fa9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                    RCSTA   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 RCSTAbits   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                    RCSTA   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TXSTA   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 TXSTAbits   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TXREG   0x000fad       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     RCREG   0x000fae       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     SPBRG   0x000faf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    SPBRGH   0x000fb0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                T3CONbits   0x000fb1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     T3CON   0x000fb1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                T3CONbits   0x000fb1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TMR3L   0x000fb2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     TMR3H   0x000fb3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 CMCONbits   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     CMCON   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   CVRCON   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                CVRCONbits   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   CVRCON   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                CCP1ASbits   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    CCP1AS   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                   ECCP1AS   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
