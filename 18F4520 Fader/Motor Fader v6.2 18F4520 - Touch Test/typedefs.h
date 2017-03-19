@@ -46,8 +46,9 @@ typedef union _Switches
         unsigned touchSW:1;
         unsigned writeSW:1;
         unsigned muteSW:1;
+        unsigned altSW:1;
         unsigned touchSense:1;
-        unsigned :3;
+        unsigned :2;
     };
 }Switches;
 

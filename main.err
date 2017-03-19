@@ -1,0 +1,1 @@
+Warning[2001] C:\Users\Pelle\Documents\Docus\Automan\Automation Project\Firmware\TR96\main.c 49 : non-near symbol 'index' declared in access section 'volatile_access'

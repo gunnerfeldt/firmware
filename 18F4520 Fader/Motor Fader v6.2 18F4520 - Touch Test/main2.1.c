@@ -122,8 +122,7 @@ void HighISRCode()
 	{	
 		I2Cstate=HandleI2C();                                   // Service I2C line. Should be fast
 	    PIR1bits.SSPIF = 0;				                        // reset I2C interrupt
-		if(I2Cstate==0x0A)NewDataIn=1;	
-				
+		if(I2Cstate==0x0A)NewDataIn=1;					
 	}
 
 
