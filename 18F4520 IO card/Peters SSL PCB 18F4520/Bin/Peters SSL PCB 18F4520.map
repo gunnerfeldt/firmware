@@ -1,51 +1,47 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Thu Jan 07 13:16:14 2016
+Linker Map File - Created Mon Mar 20 17:17:42 2017
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x00000e
-          .code_main8.0.o       code   0x000014    program   0x001310
-               _cinit_scn       code   0x001324    program   0x00009e
-          .code_fxm3232.o       code   0x0013c2    program   0x000070
-          .code_adcopen.o       code   0x001432    program   0x00006e
-                     PROG       code   0x0014a0    program   0x00004c
-         .code_fxd3232u.o       code   0x0014ec    program   0x000048
-           .code_t0open.o       code   0x001534    program   0x000038
-           .code_t2open.o       code   0x00156c    program   0x000036
-         .code_fxd1616u.o       code   0x0015a2    program   0x00002c
-                    .code       code   0x0015ce    program   0x000020
-             _startup_scn       code   0x0015ee    program   0x00001c
-          .code_adcconv.o       code   0x00160a    program   0x000004
-           .code___init.o       code   0x00160e    program   0x000002
-        .romdata_t2open.o    romdata   0x001610    program   0x000000
-        .romdata___init.o    romdata   0x001610    program   0x000000
-        .idata_t2open.o_i    romdata   0x001610    program   0x000000
-        .romdata_t0open.o    romdata   0x001610    program   0x000000
-        .idata_t0open.o_i    romdata   0x001610    program   0x000000
-       .romdata_adcopen.o    romdata   0x001610    program   0x000000
-       .romdata_fxm3232.o    romdata   0x001610    program   0x000000
-      .romdata_fxd3232u.o    romdata   0x001610    program   0x000000
-      .romdata_fxd1616u.o    romdata   0x001610    program   0x000000
-       .romdata_adcconv.o    romdata   0x001610    program   0x000000
-       .romdata_main8.0.o    romdata   0x001610    program   0x000000
-       .idata_main8.0.o_i    romdata   0x001610    program   0x000039
-         .romdata_c018i.o    romdata   0x001610    program   0x000000
-       .idata_fxm3232.o_i    romdata   0x001649    program   0x000000
-       .idata_adcopen.o_i    romdata   0x001649    program   0x000000
-      .idata_fxd3232u.o_i    romdata   0x001649    program   0x000000
-      .idata_fxd1616u.o_i    romdata   0x001649    program   0x000000
-       .idata_adcconv.o_i    romdata   0x001649    program   0x000000
-        .idata___init.o_i    romdata   0x001649    program   0x000000
-         .idata_c018i.o_i    romdata   0x001649    program   0x000000
-            .code_c018i.o       code   0x00164a    program   0x000000
+   .code_main8.2 (mute).o       code   0x000014    program   0x0010c4
+               _cinit_scn       code   0x0010d8    program   0x00009e
+          .code_fxm3232.o       code   0x001176    program   0x000070
+          .code_adcopen.o       code   0x0011e6    program   0x00006e
+         .code_fxd3232u.o       code   0x001254    program   0x000048
+           .code_t0open.o       code   0x00129c    program   0x000038
+           .code_t2open.o       code   0x0012d4    program   0x000036
+                    .code       code   0x00130a    program   0x000020
+             _startup_scn       code   0x00132a    program   0x00001c
+          .code_adcconv.o       code   0x001346    program   0x000004
+           .code___init.o       code   0x00134a    program   0x000002
+        .romdata_t0open.o    romdata   0x00134c    program   0x000000
+        .idata_t0open.o_i    romdata   0x00134c    program   0x000000
+       .romdata_adcopen.o    romdata   0x00134c    program   0x000000
+        .romdata_t2open.o    romdata   0x00134c    program   0x000000
+        .idata_t2open.o_i    romdata   0x00134c    program   0x000000
+       .romdata_fxm3232.o    romdata   0x00134c    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x00134c    program   0x000000
+       .romdata_adcconv.o    romdata   0x00134c    program   0x000000
+        .romdata___init.o    romdata   0x00134c    program   0x000000
+.romdata_main8.2 (mute).o    romdata   0x00134c    program   0x000000
+.idata_main8.2 (mute).o_i    romdata   0x00134c    program   0x000039
+         .romdata_c018i.o    romdata   0x00134c    program   0x000000
+        .idata___init.o_i    romdata   0x001385    program   0x000000
+       .idata_adcopen.o_i    romdata   0x001385    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x001385    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x001385    program   0x000000
+       .idata_adcconv.o_i    romdata   0x001385    program   0x000000
+         .idata_c018i.o_i    romdata   0x001385    program   0x000000
+            .code_c018i.o       code   0x001386    program   0x000000
           volatile_access      udata   0x000000       data   0x000065
                 MATH_DATA      udata   0x000065       data   0x000010
                  .tmpdata      udata   0x000075       data   0x000006
 YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
-         .udata_main8.0.o      udata   0x000100       data   0x000096
-         .idata_main8.0.o      idata   0x000196       data   0x000039
+  .udata_main8.2 (mute).o      udata   0x000100       data   0x000096
+  .idata_main8.2 (mute).o      idata   0x000196       data   0x000039
            .udata_c018i.o      udata   0x0001cf       data   0x00000a
           .idata___init.o      idata   0x0001d9       data   0x000000
           .udata___init.o      udata   0x0001d9       data   0x000000
@@ -59,8 +55,6 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
          .udata_fxm3232.o      udata   0x0001d9       data   0x000000
         .idata_fxd3232u.o      idata   0x0001d9       data   0x000000
         .udata_fxd3232u.o      udata   0x0001d9       data   0x000000
-        .idata_fxd1616u.o      idata   0x0001d9       data   0x000000
-        .udata_fxd1616u.o      udata   0x0001d9       data   0x000000
          .idata_adcconv.o      idata   0x0001d9       data   0x000000
          .udata_adcconv.o      udata   0x0001d9       data   0x000000
            .idata_c018i.o      idata   0x0001d9       data   0x000000
@@ -72,65 +66,55 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x001648      
-            5705 out of 33048 program addresses used, program memory utilization is 17%
+                            0x000000    0x001384      
+            4997 out of 33048 program addresses used, program memory utilization is 15%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-               ConvertADC   0x00160a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
-                   D1616S   0x0014c2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x0014d0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x0014cc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x0014e2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x0014b2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD1616S   0x0014a0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD1616U   0x0015a2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                 FXD3232U   0x0014ec    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                  FXM3232   0x0013c2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
-                     Init   0x000234    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                LEDaction   0x00129a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  OpenADC   0x001432    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
-               OpenTimer0   0x001534    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
-               OpenTimer2   0x00156c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t2open.c
-                  PGtoVCA   0x000d8e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                Read_Mute   0x0011ca    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-            Read_Switches   0x000c4c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 Set_Leds   0x000b02    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                Set_Mutes   0x000aa8    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  Set_VCA   0x00089c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                Start_ADC   0x0011c6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  VCAtoPG   0x000faa    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-  YourHighPriorityISRCode   0x000014    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-   YourLowPriorityISRCode   0x00020e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-       ___return_lbl00000   0x0015cc    program     static                          
-       ___return_lbl00000   0x001532    program     static                          
-       ___return_lbl00000   0x001430    program     static                          
+               ConvertADC   0x001346    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
+                 FXD3232U   0x001254    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                  FXM3232   0x001176    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+                     Init   0x000234    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                LEDaction   0x00104e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  OpenADC   0x0011e6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+               OpenTimer0   0x00129c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
+               OpenTimer2   0x0012d4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t2open.c
+                  PGtoVCA   0x000b42    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                Read_Mute   0x000f7e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+            Read_Switches   0x000a00    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 Set_Leds   0x0008b6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                Set_Mutes   0x000812    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  Set_VCA   0x000682    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                Start_ADC   0x000f7a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  VCAtoPG   0x000d5e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+  YourHighPriorityISRCode   0x000014    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+   YourLowPriorityISRCode   0x00020e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+       ___return_lbl00000   0x00129a    program     static                          
+       ___return_lbl00000   0x0011e4    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x001608    program     static                          
-       ___return_lbl00002   0x0013c0    program     static                          
-                   __init   0x00160e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x0015ce    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                _do_cinit   0x001324    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+       ___return_lbl00001   0x001344    program     static                          
+       ___return_lbl00002   0x001174    program     static                          
+                   __init   0x00134a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+            __zero_memory   0x00130a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                _do_cinit   0x0010d8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                   _false   0x00152e    program     static                          
-                 _startup   0x0015ee    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x0015e4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                copy_loop   0x001396    program     static                          
-            copy_one_byte   0x00139c    program     static                          
-                     done   0x0013c0    program     static                          
-             done_copying   0x0013aa    program     static                          
-                  endloop   0x0015c8    program     static                          
-                     loop   0x0014fa    program     static                          
-                     loop   0x0015ac    program     static                          
-                     loop   0x0015fe    program     static                          
-                   loop_h   0x0015dc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_l   0x0015e6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                     main   0x00031a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     test   0x00133e    program     static                          
-               zero_block   0x0015dc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   _false   0x001296    program     static                          
+                 _startup   0x00132a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x001320    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                copy_loop   0x00114a    program     static                          
+            copy_one_byte   0x001150    program     static                          
+                     done   0x001174    program     static                          
+             done_copying   0x00115e    program     static                          
+                     loop   0x00133a    program     static                          
+                     loop   0x001262    program     static                          
+                   loop_h   0x001318    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x001322    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     main   0x00031a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     test   0x0010f2    program     static                          
+               zero_block   0x001318    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADCON0   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                ADCON0bits   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADCON1   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -140,16 +124,16 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                     ADRES   0x000fc3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADRESH   0x000fc4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADRESL   0x000fc3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                     AUTO   0x0001b1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                     AUTO   0x0001b1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                   BAUDCON   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
               BAUDCONbits   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                   BAUDCTL   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
               BAUDCTLbits   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                       BSR   0x000fe0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                 BlinkCnt   0x00019b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 BlinkLED   0x0001a1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-      BlinkTouchStatusLED   0x0001a2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  CARD_ID   0x0001a7       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                 BlinkCnt   0x00019b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 BlinkLED   0x0001a1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+      BlinkTouchStatusLED   0x0001a2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  CARD_ID   0x0001a7       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                   CCP1CON   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
               CCP1CONbits   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                   CCP2CON   0x000fba       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -164,13 +148,13 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                 CMCONbits   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    CVRCON   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                CVRCONbits   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                  DACaddr   0x00018b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   DACcnt   0x00017d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 DACdelta   0x000126       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   DAClog   0x000184       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-              DACsetPoint   0x000053       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   DACval   0x000187       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  DACword   0x000189       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                  DACaddr   0x00018b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   DACcnt   0x00017d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 DACdelta   0x000126       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   DAClog   0x000184       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+              DACsetPoint   0x000053       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   DACval   0x000187       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  DACword   0x000189       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                      DDRA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                  DDRAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                      DDRB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -201,7 +185,7 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                      FSR2   0x000fd9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                     FSR2H   0x000fda       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                     FSR2L   0x000fd9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                HANDSHAKE   0x000197       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                HANDSHAKE   0x000197       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                   HLVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
               HLVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                     INDF0   0x000fef       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -213,8 +197,8 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                   INTCON3   0x000ff0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
               INTCON3bits   0x000ff0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                INTCONbits   0x000ff2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                 INbuffer   0x000013       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   INdata   0x000003       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                 INbuffer   0x000013       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   INdata   0x000003       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                      IPR1   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                  IPR1bits   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                      IPR2   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -229,25 +213,25 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                  LATDbits   0x000f8c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                      LATE   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                  LATEbits   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                 LED_byte   0x000193       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   LEDcnt   0x000180       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  LEDcntr   0x0001c9       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 LEDcntr2   0x0001cd       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   LEDdim   0x0001cb       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                LEDtoggle   0x0001a3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  LEDword   0x00017f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                 LED_byte   0x000193       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   LEDcnt   0x000180       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  LEDcntr   0x0001c9       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 LEDcntr2   0x0001cd       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   LEDdim   0x0001cb       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                LEDtoggle   0x0001a3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  LEDword   0x00017f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                    LVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                LVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-            LocalMuteBits   0x000198       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   Ltimer   0x000145       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   MANUAL   0x0001b0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-              MOTORFADERS   0x000196       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                      MUX   0x000151       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+            LocalMuteBits   0x000198       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   Ltimer   0x000145       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   MANUAL   0x0001b0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+              MOTORFADERS   0x000196       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                      MUX   0x000151       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                    OSCCON   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                OSCCONbits   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                   OSCTUNE   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
               OSCTUNEbits   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                  OUTdata   0x000023       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                  OUTdata   0x000023       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                        PC   0x000ff9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                       PCL   0x000ff9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    PCLATH   0x000ffa       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -288,15 +272,15 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                     PRODL   0x000ff3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                   PWM1CON   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
               PWM1CONbits   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-         ParallelPortflag   0x0001bd       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  Q_Frame   0x0001be       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-             Q_Frame_Flag   0x0001bf       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+         ParallelPortflag   0x0001bd       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  Q_Frame   0x0001be       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+             Q_Frame_Flag   0x0001bf       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                      RCON   0x000fd0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                  RCONbits   0x000fd0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                     RCREG   0x000fae       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                     RCSTA   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                 RCSTAbits   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                     SIGN   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                     SIGN   0x000073       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                     SPBRG   0x000faf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    SPBRGH   0x000fb0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    SSPADD   0x000fc8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -311,11 +295,11 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                STATUSbits   0x000fd8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    STKPTR   0x000ffc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                STKPTRbits   0x000ffc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                    SWcnt   0x000182       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  ShiftIn   0x000144       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 ShiftOut   0x00013f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-         StoredSwitchBits   0x00019a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-               SwitchBits   0x000199       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                    SWcnt   0x000182       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  ShiftIn   0x000144       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 ShiftOut   0x00013f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+         StoredSwitchBits   0x00019a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+               SwitchBits   0x000199       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                     T0CON   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                 T0CONbits   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                     T1CON   0x000fcd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -329,8 +313,8 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                   TBLPTRH   0x000ff7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                   TBLPTRL   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                   TBLPTRU   0x000ff8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                    TEST2   0x0001ba       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                TICK_RATE   0x0001b4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                    TEST2   0x0001ba       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                TICK_RATE   0x0001b4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                     TMR0H   0x000fd7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                     TMR0L   0x000fd6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                     TMR1H   0x000fcf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -342,7 +326,7 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                      TOSH   0x000ffe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                      TOSL   0x000ffd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                      TOSU   0x000fff       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                    TOUCH   0x0001b2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                    TOUCH   0x0001b2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                     TRISA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                 TRISAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                     TRISB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -356,93 +340,93 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                     TXREG   0x000fad       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                     TXSTA   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                 TXSTAbits   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-               Timer_Flag   0x0001c0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 VCAfader   0x000102       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 VCAgroup   0x00019f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-              VCAgroupLin   0x000113       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   VCAout   0x000033       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                VCAoutOld   0x000043       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   VCAyes   0x0001a6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+               Timer_Flag   0x0001c0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 VCAfader   0x000102       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 VCAgroup   0x00019f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+              VCAgroupLin   0x000113       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   VCAout   0x000033       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                VCAoutOld   0x000043       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   VCAyes   0x0001a6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                         W   0x000fe8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    WDTCON   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                WDTCONbits   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                      WREG   0x000fe8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                    WRITE   0x0001b3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     Wcnt   0x000169       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-           WriteToDACflag   0x0001bc       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 __AARGB0   0x00006e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB1   0x00006d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB2   0x00006c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB3   0x00006b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB4   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB5   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB6   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB7   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                   __AEXP   0x00006f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __BARGB0   0x000073       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB1   0x000072       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB2   0x000071       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB3   0x000070       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                   __BEXP   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                __FPFLAGS   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-            __FPFLAGSbits   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                  __REMB0   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB1   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB2   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB3   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                    WRITE   0x0001b3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     Wcnt   0x000169       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+           WriteToDACflag   0x0001bc       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 __AARGB0   0x00006c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB1   0x00006b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB2   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB3   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB4   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB7   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __AEXP   0x00006d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __BARGB0   0x000071       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB1   0x000070       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB2   0x00006f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB3   0x00006e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                   __BEXP   0x000072       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                __FPFLAGS   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                  __REMB0   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB2   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB3   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __tmp_0   0x000075       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
-                  __tmp_0   0x000075       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  __tmp_1   0x00007b       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                      adc   0x00013a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   adcLSB   0x00013d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   adcMSB   0x00013c       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   adcchn   0x0001af       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-          automationState   0x0001a8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 blinkcnt   0x000161       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   busLED   0x0001c5       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   busLED   0x0001c8       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 clk_flag   0x0001b6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  clk_flg   0x0001b5       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                      cnt   0x000165       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     cnt1   0x000171       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     cnt2   0x000175       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     cnt3   0x000179       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-             cueTableCntr   0x000063       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-             cueTableFlag   0x000064       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                  __tmp_0   0x000075       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  __tmp_1   0x00007b       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                      adc   0x00013a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   adcLSB   0x00013d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   adcMSB   0x00013c       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   adcchn   0x0001af       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+          automationState   0x0001a8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 blinkcnt   0x000161       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   busLED   0x0001c5       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   busLED   0x0001c8       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 clk_flag   0x0001b6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  clk_flg   0x0001b5       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                      cnt   0x000165       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     cnt1   0x000171       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     cnt2   0x000175       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     cnt3   0x000179       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+             cueTableCntr   0x000063       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+             cueTableFlag   0x000064       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                 curr_byte   0x0001d2       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                curr_entry   0x0001d4       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  data_ptr   0x0001d6       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                    delta   0x000136       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   doOnce   0x0001b7       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                    error   0x00013e       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  fpsCntr   0x000112       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   fpsTmr   0x0001a0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                grpRecall   0x0001aa       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-              grpSnapshot   0x0001a9       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-      hardwareReportState   0x0001ab       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   hi_adc   0x000191       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-           lastMuxedIndex   0x00019e       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-               ledTRblink   0x000123       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                ledTRcntr   0x000124       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   lo_adc   0x00018f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 loopCntr   0x0001c1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  muxCntr   0x0001b8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 muxIndex   0x00019d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                    delta   0x000136       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   doOnce   0x0001b7       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                    error   0x00013e       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  fpsCntr   0x000112       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   fpsTmr   0x0001a0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                grpRecall   0x0001aa       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+              grpSnapshot   0x0001a9       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+      hardwareReportState   0x0001ab       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   hi_adc   0x000191       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+           lastMuxedIndex   0x00019e       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+               ledTRblink   0x000123       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                ledTRcntr   0x000124       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   lo_adc   0x00018f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 loopCntr   0x0001c1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  muxCntr   0x0001b8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 muxIndex   0x00019d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                      prom   0x0001cf       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-              readADCflag   0x0001c4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                shiftData   0x000000       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-             startADCflag   0x0001c3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-               statusFlag   0x0001ad       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-              status_bits   0x000100       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                       sw   0x000149       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  tempVCA   0x000194       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     test   0x0001b9       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   testCV   0x0001a4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  testDAC   0x0001c6       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-         totalRecallState   0x0001ac       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   trMode   0x0001ae       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   vca_in   0x00018d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                    wCntr   0x00016d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+              readADCflag   0x0001c4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                shiftData   0x000000       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+             startADCflag   0x0001c3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+               statusFlag   0x0001ad       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+              status_bits   0x000100       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                       sw   0x000149       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  tempVCA   0x000194       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     test   0x0001b9       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   testCV   0x0001a4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  testDAC   0x0001c6       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+         totalRecallState   0x0001ac       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   trMode   0x0001ae       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   vca_in   0x00018d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                    wCntr   0x00016d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
 
 
 
@@ -451,174 +435,164 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                 ---------  ---------  ---------  --------- ---------                
                    _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
        ___return_lbl00000   0x000004    program     static                          
-  YourHighPriorityISRCode   0x000014    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-   YourLowPriorityISRCode   0x00020e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     Init   0x000234    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     main   0x00031a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  Set_VCA   0x00089c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                Set_Mutes   0x000aa8    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 Set_Leds   0x000b02    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-            Read_Switches   0x000c4c    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  PGtoVCA   0x000d8e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  VCAtoPG   0x000faa    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                Start_ADC   0x0011c6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                Read_Mute   0x0011ca    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                LEDaction   0x00129a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                _do_cinit   0x001324    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x00133e    program     static                          
-                copy_loop   0x001396    program     static                          
-            copy_one_byte   0x00139c    program     static                          
-             done_copying   0x0013aa    program     static                          
-                     done   0x0013c0    program     static                          
-       ___return_lbl00002   0x0013c0    program     static                          
-                  FXM3232   0x0013c2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
-       ___return_lbl00000   0x001430    program     static                          
-                  OpenADC   0x001432    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
-                 FXD1616S   0x0014a0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x0014b2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D1616S   0x0014c2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x0014cc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x0014d0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x0014e2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD3232U   0x0014ec    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                     loop   0x0014fa    program     static                          
-                   _false   0x00152e    program     static                          
-       ___return_lbl00000   0x001532    program     static                          
-               OpenTimer0   0x001534    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
-               OpenTimer2   0x00156c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t2open.c
-                 FXD1616U   0x0015a2    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                     loop   0x0015ac    program     static                          
-                  endloop   0x0015c8    program     static                          
-       ___return_lbl00000   0x0015cc    program     static                          
-            __zero_memory   0x0015ce    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_h   0x0015dc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-               zero_block   0x0015dc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                compare_l   0x0015e4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_l   0x0015e6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                 _startup   0x0015ee    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x0015fe    program     static                          
-       ___return_lbl00001   0x001608    program     static                          
-               ConvertADC   0x00160a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
-                   __init   0x00160e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-                shiftData   0x000000       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   INdata   0x000003       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 INbuffer   0x000013       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  OUTdata   0x000023       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   VCAout   0x000033       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                VCAoutOld   0x000043       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-              DACsetPoint   0x000053       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-             cueTableCntr   0x000063       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-             cueTableFlag   0x000064       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     SIGN   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                __FPFLAGS   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-            __FPFLAGSbits   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                 __AARGB7   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB3   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB2   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB6   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB1   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB5   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB4   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB0   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB3   0x00006b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB2   0x00006c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB1   0x00006d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB0   0x00006e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                   __AEXP   0x00006f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __BARGB3   0x000070       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB2   0x000071       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB1   0x000072       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB0   0x000073       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                   __BEXP   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                  __tmp_0   0x000075       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+  YourHighPriorityISRCode   0x000014    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+   YourLowPriorityISRCode   0x00020e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     Init   0x000234    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     main   0x00031a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  Set_VCA   0x000682    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                Set_Mutes   0x000812    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 Set_Leds   0x0008b6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+            Read_Switches   0x000a00    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  PGtoVCA   0x000b42    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  VCAtoPG   0x000d5e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                Start_ADC   0x000f7a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                Read_Mute   0x000f7e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                LEDaction   0x00104e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                _do_cinit   0x0010d8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x0010f2    program     static                          
+                copy_loop   0x00114a    program     static                          
+            copy_one_byte   0x001150    program     static                          
+             done_copying   0x00115e    program     static                          
+       ___return_lbl00002   0x001174    program     static                          
+                     done   0x001174    program     static                          
+                  FXM3232   0x001176    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x0011e4    program     static                          
+                  OpenADC   0x0011e6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+                 FXD3232U   0x001254    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                     loop   0x001262    program     static                          
+                   _false   0x001296    program     static                          
+       ___return_lbl00000   0x00129a    program     static                          
+               OpenTimer0   0x00129c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
+               OpenTimer2   0x0012d4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t2open.c
+            __zero_memory   0x00130a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_h   0x001318    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               zero_block   0x001318    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                compare_l   0x001320    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x001322    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 _startup   0x00132a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x00133a    program     static                          
+       ___return_lbl00001   0x001344    program     static                          
+               ConvertADC   0x001346    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
+                   __init   0x00134a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                shiftData   0x000000       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   INdata   0x000003       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 INbuffer   0x000013       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  OUTdata   0x000023       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   VCAout   0x000033       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                VCAoutOld   0x000043       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+              DACsetPoint   0x000053       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+             cueTableCntr   0x000063       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+             cueTableFlag   0x000064       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 __AARGB7   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB3   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB2   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB0   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB4   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB3   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB2   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB1   0x00006b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB0   0x00006c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __AEXP   0x00006d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __BARGB3   0x00006e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB2   0x00006f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB1   0x000070       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB0   0x000071       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                   __BEXP   0x000072       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                     SIGN   0x000073       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                __FPFLAGS   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                  __tmp_0   0x000075       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                   __tmp_0   0x000075       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
-                  __tmp_1   0x00007b       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-              status_bits   0x000100       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 VCAfader   0x000102       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  fpsCntr   0x000112       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-              VCAgroupLin   0x000113       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-               ledTRblink   0x000123       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                ledTRcntr   0x000124       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 DACdelta   0x000126       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                    delta   0x000136       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                      adc   0x00013a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   adcMSB   0x00013c       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   adcLSB   0x00013d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                    error   0x00013e       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 ShiftOut   0x00013f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  ShiftIn   0x000144       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   Ltimer   0x000145       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                       sw   0x000149       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                      MUX   0x000151       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 blinkcnt   0x000161       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                      cnt   0x000165       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     Wcnt   0x000169       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                    wCntr   0x00016d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     cnt1   0x000171       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     cnt2   0x000175       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     cnt3   0x000179       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   DACcnt   0x00017d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  LEDword   0x00017f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   LEDcnt   0x000180       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                    SWcnt   0x000182       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   DAClog   0x000184       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   DACval   0x000187       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  DACword   0x000189       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  DACaddr   0x00018b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   vca_in   0x00018d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   lo_adc   0x00018f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   hi_adc   0x000191       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 LED_byte   0x000193       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  tempVCA   0x000194       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-              MOTORFADERS   0x000196       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                HANDSHAKE   0x000197       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-            LocalMuteBits   0x000198       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-               SwitchBits   0x000199       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-         StoredSwitchBits   0x00019a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 BlinkCnt   0x00019b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 muxIndex   0x00019d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-           lastMuxedIndex   0x00019e       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 VCAgroup   0x00019f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   fpsTmr   0x0001a0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 BlinkLED   0x0001a1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-      BlinkTouchStatusLED   0x0001a2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                LEDtoggle   0x0001a3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   testCV   0x0001a4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   VCAyes   0x0001a6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  CARD_ID   0x0001a7       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-          automationState   0x0001a8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-              grpSnapshot   0x0001a9       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                grpRecall   0x0001aa       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-      hardwareReportState   0x0001ab       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-         totalRecallState   0x0001ac       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-               statusFlag   0x0001ad       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   trMode   0x0001ae       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   adcchn   0x0001af       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   MANUAL   0x0001b0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     AUTO   0x0001b1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                    TOUCH   0x0001b2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                    WRITE   0x0001b3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                TICK_RATE   0x0001b4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  clk_flg   0x0001b5       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 clk_flag   0x0001b6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   doOnce   0x0001b7       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  muxCntr   0x0001b8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                     test   0x0001b9       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                    TEST2   0x0001ba       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-           WriteToDACflag   0x0001bc       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-         ParallelPortflag   0x0001bd       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  Q_Frame   0x0001be       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-             Q_Frame_Flag   0x0001bf       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-               Timer_Flag   0x0001c0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 loopCntr   0x0001c1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-             startADCflag   0x0001c3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-              readADCflag   0x0001c4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   busLED   0x0001c5       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  testDAC   0x0001c6       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   busLED   0x0001c8       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                  LEDcntr   0x0001c9       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                   LEDdim   0x0001cb       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
-                 LEDcntr2   0x0001cd       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.0.c
+                  __tmp_1   0x00007b       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+              status_bits   0x000100       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 VCAfader   0x000102       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  fpsCntr   0x000112       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+              VCAgroupLin   0x000113       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+               ledTRblink   0x000123       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                ledTRcntr   0x000124       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 DACdelta   0x000126       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                    delta   0x000136       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                      adc   0x00013a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   adcMSB   0x00013c       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   adcLSB   0x00013d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                    error   0x00013e       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 ShiftOut   0x00013f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  ShiftIn   0x000144       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   Ltimer   0x000145       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                       sw   0x000149       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                      MUX   0x000151       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 blinkcnt   0x000161       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                      cnt   0x000165       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     Wcnt   0x000169       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                    wCntr   0x00016d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     cnt1   0x000171       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     cnt2   0x000175       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     cnt3   0x000179       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   DACcnt   0x00017d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  LEDword   0x00017f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   LEDcnt   0x000180       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                    SWcnt   0x000182       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   DAClog   0x000184       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   DACval   0x000187       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  DACword   0x000189       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  DACaddr   0x00018b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   vca_in   0x00018d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   lo_adc   0x00018f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   hi_adc   0x000191       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 LED_byte   0x000193       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  tempVCA   0x000194       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+              MOTORFADERS   0x000196       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                HANDSHAKE   0x000197       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+            LocalMuteBits   0x000198       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+               SwitchBits   0x000199       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+         StoredSwitchBits   0x00019a       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 BlinkCnt   0x00019b       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 muxIndex   0x00019d       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+           lastMuxedIndex   0x00019e       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 VCAgroup   0x00019f       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   fpsTmr   0x0001a0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 BlinkLED   0x0001a1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+      BlinkTouchStatusLED   0x0001a2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                LEDtoggle   0x0001a3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   testCV   0x0001a4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   VCAyes   0x0001a6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  CARD_ID   0x0001a7       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+          automationState   0x0001a8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+              grpSnapshot   0x0001a9       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                grpRecall   0x0001aa       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+      hardwareReportState   0x0001ab       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+         totalRecallState   0x0001ac       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+               statusFlag   0x0001ad       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   trMode   0x0001ae       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   adcchn   0x0001af       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   MANUAL   0x0001b0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     AUTO   0x0001b1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                    TOUCH   0x0001b2       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                    WRITE   0x0001b3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                TICK_RATE   0x0001b4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  clk_flg   0x0001b5       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 clk_flag   0x0001b6       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   doOnce   0x0001b7       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  muxCntr   0x0001b8       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                     test   0x0001b9       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                    TEST2   0x0001ba       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+           WriteToDACflag   0x0001bc       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+         ParallelPortflag   0x0001bd       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  Q_Frame   0x0001be       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+             Q_Frame_Flag   0x0001bf       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+               Timer_Flag   0x0001c0       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 loopCntr   0x0001c1       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+             startADCflag   0x0001c3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+              readADCflag   0x0001c4       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   busLED   0x0001c5       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  testDAC   0x0001c6       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   busLED   0x0001c8       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  LEDcntr   0x0001c9       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                   LEDdim   0x0001cb       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 LEDcntr2   0x0001cd       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                      prom   0x0001cf       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                 curr_byte   0x0001d2       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                curr_entry   0x0001d4       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c

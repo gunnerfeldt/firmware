@@ -18,9 +18,13 @@
 
 	v3.1
 		2014-10-14
-		Automan Efforts
+          		Automan Efforts
 	v6.2
 		Try to add more secure fail exits from communication loops
+
+	v7.0 has TR code. All pots are encoded from log to lin which comes up weird
+
+	v7.1 try to detect TR mode and keep value linear
 	
  */
 
@@ -198,6 +202,7 @@ unsigned char totalRecallState = 0;
 unsigned char ledTRblink;
 unsigned int ledTRcntr;
 unsigned char statusFlag = 0;
+unsigned char trMode=0;
 
 int DACdelta[8];
 long delta;
@@ -272,6 +277,8 @@ BOOL clk_flg = FALSE;
 	unsigned int loopCntr=0;
 
 unsigned int tempVCA;
+unsigned char startADCflag=0;
+unsigned char readADCflag=0;
 
 // *********************************** Prototypes ****************************************
 void Init(void);
@@ -294,140 +301,161 @@ int VCAtoPG(int);
 // *********************************** Interrupts ****************************************
 
 #pragma interrupt YourHighPriorityISRCode
+unsigned char busLED=0;
 
-	void YourHighPriorityISRCode()
+void YourHighPriorityISRCode()
+{
+	unsigned int ADC_value;
+
+	if (INTCONbits.INT0IF)									// Interrupt flag for RB0
 	{
-		unsigned int ADC_value;
-
-		if (INTCONbits.INT0IF)									// Interrupt flag for RB0
-		{
-			cnt=0;
-			SSP_write();									// First send the 16 bytes
+		cnt=0;
+		SSP_write();									// First send the 16 bytes
 // v3.2
-			if(1)
+		if(1)
+		{
+		
+			if (!ParallelPortflag)								// Interrupt flag for RB0
+		//	if (1)								// Interrupt flag for RB0
 			{
-				if (!ParallelPortflag)								// Interrupt flag for RB0
+				LATD = OUTdata.data[0];							// start with first byte on parallel port
+				while(cnt<16)
 				{
-					LATD = OUTdata.data[0];							// start with first byte on parallel port
-					while(cnt<16)
-					{
-						while(SSP_clk==0){if(!SSP_en)break;}						// Wait for fisrt clock
-						cnt++;										// count index
-						LATD = OUTdata.data[(cnt)];					// Put byte on parallel port
-						while(SSP_clk==1){if(!SSP_en)break;}						// Data must remain on the port until clock falls
-						if(!SSP_en)break;								// if CS pin releases, abort
-					}												// loop 16 times
-					SSP_read();										// Then read
-					while(cnt<32)
-					{
-						while(SSP_clk==0){if(!SSP_en)break;}						// Wait until clock rises
-						INbuffer.data[cnt-16]=PORTD;					// read and store port in a buffer
-						cnt++;										// count index
-						while(SSP_clk==1){if(!SSP_en)break;}						// hold until clock falls
-						if(!SSP_en)break;							// if CS pin releases, abort
-					}
-					SSP_read();
-					if(cnt==32)ParallelPortflag=1;					// Flag for new data in
-
-					cueTableCntr=0;
-					fpsCntr=0;
+					while(SSP_clk==0){if(!SSP_en)break;}						// Wait for fisrt clock
+					cnt++;										// count index
+					LATD = OUTdata.data[(cnt)];					// Put byte on parallel port
+					while(SSP_clk==1){if(!SSP_en)break;}						// Data must remain on the port until clock falls
+					if(!SSP_en)break;								// if CS pin releases, abort
+				}												// loop 16 times
+				SSP_read();										// Then read
+				while(cnt<32)
+				{
+					while(SSP_clk==0){if(!SSP_en)break;}						// Wait until clock rises
+					INbuffer.data[cnt-16]=PORTD;					// read and store port in a buffer
+					cnt++;										// count index
+					while(SSP_clk==1){if(!SSP_en)break;}						// hold until clock falls
+					if(!SSP_en)break;							// if CS pin releases, abort
 				}
 				SSP_read();
+				if(cnt==32)ParallelPortflag=1;					// Flag for new data in
+
+				cueTableCntr=0;
+				fpsCntr=0;
 			}
-
-			INTCONbits.INT0IF=0;								// clear int flag
+			SSP_read();
+			ParallelPortflag=1;
 		}
 
-
-
-		if (INTCON3bits.INT2IF)									// Interrupt flag for RB1
+// this was 16 2015-01-08
+		if(loopCntr>12)		// autoMode
 		{
-			Q_Frame_Flag = 1;									// Strobe every Q frame
-			INTCON3bits.INT2IF = 0;								// Clear interrupt on port RB1
+			trMode=0;
 		}
+		else 					// trMode
+		{
+			trMode=1;
+		}
+	
+		loopCntr = 0;
+		INTCONbits.INT0IF=0;								// clear int flag
+	}
+
+
+
+	if (INTCON3bits.INT2IF)									// Interrupt flag for RB1
+	{
+		Q_Frame_Flag = 1;									// Strobe every Q frame
+		INTCON3bits.INT2IF = 0;								// Clear interrupt on port RB1
+	}
 
 
 	if (PIR1bits.ADIF)									// Interrupt flag for ADC
 	{
-		
-
+		readADCflag=1;
+/*	
 		ADC_value = ADRESH;	
 		ADC_value = (ADC_value<<8)+ADRESL;				// put the word together
+	
+		VCAfader[lastMuxedIndex]=ADC_value;
 
-//		VCAfader[lastMuxedIndex]=(VCAfader[lastMuxedIndex]+ADC_value)/2;
-		VCAfader[lastMuxedIndex]=ADC_value;	
+		Read_Mute(lastMuxedIndex);
 
-/*
-		VCAfader[lastMuxedIndex] = ADRESH;	
-		VCAfader[lastMuxedIndex] = (VCAfader[lastMuxedIndex]<<8)+ADRESL;				// put the word together
+		LATE = MUX[muxIndex]; 	 
+		lastMuxedIndex=muxIndex;
 
-		if(((LocalMuteBits>>lastMuxedIndex)&1) != MUTE_IN)						// Check for MUTE change
-		{
-			if(MUTE_IN) 
-			{
-				OUTdata.channel[lastMuxedIndex].mute_press = 1;				// Event flag for mute press
-				OUTdata.channel[lastMuxedIndex].mute_release = 0;					// clear event flag
-				bit_set(LocalMuteBits,lastMuxedIndex);							// Set bit in a storage byte
-
-			}
-			else
-			{
-				OUTdata.channel[lastMuxedIndex].mute_press = 0;				// clear event flag
-				OUTdata.channel[lastMuxedIndex].mute_release = 1;				// Event flag for mute release
-				bit_clr(LocalMuteBits,lastMuxedIndex);							// Clear bit in a storage byte
-			}
-		}
-		else
-		{
-			OUTdata.channel[lastMuxedIndex].mute_press = 0;					// clear event flag
-			OUTdata.channel[lastMuxedIndex].mute_release = 0;					// clear event flag
-		}
+		muxIndex++;
+		muxIndex=muxIndex&0x7;
 */
 		PIR1bits.ADIF = 0;									// Clear interrupt
 		
 	}
 
-/*
+	/*
 	Fires with a 2ms interval
 	Builds a cue table for operations
 	16 slots per cycle
 	each slot must not exceed 2ms
-
+	
 	Motor Fader Index reset on every busComm
 	The other circulate freely
-
+	
 	Cue Table (0-15):
-
+	
 	Odd	- MUX ADC
 		  Update DAC + Mute
 		  Read Switches
-
+	
 	Even	- Read ADC + Mute
 		  Update DAC + Mute
 		  Update LEDs
-
-*/
+	
+	*/
 	if (INTCONbits.TMR0IF)										// Timer base for creating slots in between transfers
-	{			
+	{															// Should be around 8-10	
 		cueTableCntr++;
 		loopCntr++;
 		cueTableFlag=1;	
-
+	
 		BlinkCnt++;
-
+	
 		BlinkLED=(BlinkCnt&0x0040)!=0;
 		BlinkTouchStatusLED=(BlinkCnt&0x0380)!=0;
 
+
+//		LED=(busLED++&4)>>2;
+
+		if(!trMode)		// autoMode
+		{
+			LED=((busLED++) >> 7) & 1;
+		}
+		else 					// trMode
+		{	
+			LED=((busLED++) >> 4) & 1;
+		}
+	
 		INTCONbits.TMR0IF = 0;
 		TMR0L=SLOW;	
+		if(loopCntr>100)		// trMode and this card is not active
+		{
+			loopCntr=100;
+			LED=1;
+			SSP_read();
+		}
 	}
 
+	if (PIR1bits.TMR2IF)										// Timer base for creating slots in between transfers
+	{		
+		startADCflag=1;
+		PIR1bits.TMR2IF = 0;	
+//		ConvertADC(); // Start conversion
 	}
-	#pragma interruptlow YourLowPriorityISRCode
-	void YourLowPriorityISRCode()
-	{
 
-	}	//This return will be a "retfie", since this is in a #pragma interruptlow section
+}
+#pragma interruptlow YourLowPriorityISRCode
+void YourLowPriorityISRCode()
+{
+
+}	//This return will be a "retfie", since this is in a #pragma interruptlow section
 
 
 #pragma code
@@ -475,13 +503,17 @@ void Init(void)
 	INTCON2bits.INTEDG0 = 0; // Chip Select is inverted
 	INTCON2bits.INTEDG2 = 0; // Strobe too
 	INTCONbits.INT0IE = 1; // Bank Select RB0 interrupt - Bank Select
-	INTCON3bits.INT2IE = 1; ; // Clock RB2 interrupt - Strobe
+//	INTCON3bits.INT2IE = 1; ; // Clock RB2 interrupt - Strobe
 
 
 	OpenTimer0( TIMER_INT_ON &
 	T0_8BIT &
 	T0_SOURCE_INT &
-	T0_PS_1_128 );		// 500 Hz / 2ms interval for Cue Table
+	T0_PS_1_128 );		// 128 = 500 Hz / 2ms interval for Cue Table
+
+	OpenTimer2( TIMER_INT_ON &
+	T2_PS_1_4 &
+	T2_POST_1_6 );
 
 
 	MUX[0]=0x2;
@@ -508,6 +540,7 @@ void main (void)
 	unsigned int ADC_value;
 	signed int tempDelta;
 	static unsigned int testDAC=0;
+	static unsigned char busLED=0;
 
 	Init();
 	SSP_read();
@@ -532,35 +565,54 @@ void main (void)
 	LED=0;
 
 	while(1)
-	{
+{
 		SSP_read();
-		LEDaction();
+//		LEDaction();
 		if(ParallelPortflag)							// New Data arrived
 		{
 			loopCnt=loopCntr;
+
+			loopCntr=0;
 			for(n=0;n<8;n++)							// loop thru channels
 			{
-				LEDaction();
+			OUTdata.channel[n].mute_press = 0;					// clear event flag
+			OUTdata.channel[n].mute_release = 0;					// clear event flag
+		//		LEDaction();
 				INdata.word[n]=INbuffer.word[n];		// Copy buffer
+		//		INTCONbits.INT0IE = 0;
+
+
+//REMOVE !!! if cousing trouble. 7.0 is without
+		if(trMode)
+		{
+			ADC_value=VCAfader[n];
+		}
+		else
+		{
+			ADC_value=VCAtoPG(1023-VCAfader[n]);
+		}
+
+				OUTdata.channel[n].vca_lo=ADC_value&0xFF;
+				OUTdata.channel[n].vca_hi=ADC_value>>8;
+		//		INTCONbits.INT0IE = 1;
 
 				// if status is not "manual". DAC feeds from computer
 				if(INdata.channel[n].status)
 				{
-					DACsetPoint[n]=1023-PGtoVCA(INbuffer.word[n]&0x3FF);
-
-				//	VCAout[n]=VCAoutOld[n];
-				//	VCAoutOld[n]=DACsetPoint[n];
+				//	DACsetPoint[n]=1023-PGtoVCA(INbuffer.word[n]&0x3FF);
+					VCAout[n]=1023-PGtoVCA(INbuffer.word[n]&0x3FF);
+			
 				}
 				else
 				{
-					DACsetPoint[n]=VCAfader[n];
+				//	DACsetPoint[n]=VCAfader[n];
+					VCAout[n]=VCAfader[n];
 				}
 
+/*
 				DACdelta[n]=DACsetPoint[n];
 				DACdelta[n]=(DACdelta[n]-VCAout[n]);
-/*
-				DACdelta[n]=DACdelta[n]/loopCnt;
-*/
+
 				tempDelta=DACdelta[n];
 				if(tempDelta>-loopCnt)
 				{
@@ -572,23 +624,50 @@ void main (void)
 					if(tempDelta>0)DACdelta[n]=1;
 					else DACdelta[n]=DACdelta[n]/loopCnt;
 				}
+*/
 
 			}
 
-		loopCntr=0;
+			loopCntr=0;
+	
+			Read_Switches();
+			ParallelPortflag=0;							// Clear transfer flag. Buffer is safe to write to
 
-		Read_Switches();
-		ParallelPortflag=0;							// Clear transfer flag. Buffer is safe to write to
-		LED=!LED;
 
 		}
 	
+		if(startADCflag)
+		{
+// DAC_DATA=1;
+			startADCflag=0;
+			ConvertADC(); // Start conversion
+		}
+
+		if(readADCflag)
+		{
+			readADCflag=0;
+// DAC_DATA=0;
+			ADC_value = ADRESH;	
+			ADC_value = (ADC_value<<8)+ADRESL;				// put the word together
+		
+			VCAfader[lastMuxedIndex]=ADC_value;
+	
+			Read_Mute(lastMuxedIndex);
+	
+			LATE = MUX[muxIndex]; 	 
+			lastMuxedIndex=muxIndex;
+	
+			muxIndex++;
+			muxIndex=muxIndex&0x7;
+		}
+
 
 		if(cueTableFlag)
 		{
-			muxIndex=(cueTableCntr>>1)&7;
+	//		muxIndex=(cueTableCntr>>1)&7;
 			if((cueTableCntr&1)==0)	// even
 			{
+	/*
 				Read_Mute(lastMuxedIndex);
 				LATE = MUX[muxIndex]; 	 
 				lastMuxedIndex=muxIndex;
@@ -597,18 +676,20 @@ void main (void)
 				OUTdata.channel[muxIndex].vca_lo=ADC_value&0xFF;
 				OUTdata.channel[muxIndex].vca_hi=ADC_value>>8;
 				INTCONbits.INT0IE = 1;
-
+	*/
 				Set_Mutes();
 				Set_VCA();			// 1.28ms
 			}
 
 			else				// odd
 			{
+	/*
 				ConvertADC(); // Start conversion
+	*/
 				// Read Mute + Start Conversion
 				Set_Mutes();
 				Set_VCA();			// 1.28ms
-				if(muxIndex=7)
+//				if(muxIndex=7)
 				{
 					Set_Leds();
 				}
@@ -620,24 +701,35 @@ void main (void)
 
 // *********************************** DAC only ****************************************
 void Set_VCA(void){
-	unsigned int loopCnt = 0;
+	unsigned int n = 0;
 	unsigned int word;
 	unsigned int addr;
 	unsigned int DACvalue;
-	unsigned char ch;
+	unsigned char ch,localMute,hostMute;
 
 //	DACvalue = ((VCAout[ch]+(VCAoutOld[ch]))/2);	// VCA data from computer
 
 	for(ch=0;ch<8;ch++)
 	{
-		LEDaction();
+//		LEDaction();
 
+/*
 		VCAout[ch] += DACdelta[ch];
 		if(VCAout[ch]>1023)VCAout[ch]=1023;
 		if(VCAout[ch]<0)VCAout[ch]=0;
+*/
+
 		DACvalue = VCAout[ch];
-	
-		if(MUTE_DATA=testbit_on(LocalMuteBits,ch))DACvalue=1023;
+
+// 20 Dec 2016
+
+		localMute = testbit_on(LocalMuteBits,ch);
+		hostMute = INdata.channel[ch].mute;
+
+		if(localMute)DACvalue=1023;
+		if(hostMute)DACvalue=1023;
+
+		
 	
 		addr = ch+1;								// address for the DAC ( 1 of 8)
 		word = (addr<<12)+(DACvalue<<2);			// align the data right
@@ -646,9 +738,9 @@ void Set_VCA(void){
 
 		DAC_LOAD = 0;
 
-		for(loopCnt=0;loopCnt<16;loopCnt++)
+		for(n=0;n<16;n++)
 		{		// shift the DATA out
-	  		DAC_DATA=testbit_on(word,15-loopCnt);
+	  		DAC_DATA=testbit_on(word,15-n);
 			CLOCK_PIN = 1;
 			CLOCK_PIN = 0;
 		}
@@ -662,11 +754,15 @@ void Set_VCA(void){
 
 void Set_Mutes(void)
 {
-	unsigned char i;
+	unsigned char i,localMute,hostMute;
 	MUTE_LOAD=0;
 	for(i=0;i<8;i++)								// First send Mute data
 	{
-		MF_REG_DATA=testbit_on(LocalMuteBits,i);
+		localMute = testbit_on(LocalMuteBits,i);
+		hostMute = INdata.channel[i].mute;
+	//	MF_REG_DATA = (testbit_on(LocalMuteBits,i));
+	//	MF_REG_DATA = INdata.channel[i].mute;
+		MF_REG_DATA = localMute || hostMute;
 		CLOCK_PIN=1;
 		CLOCK_PIN=0;
 	}
@@ -835,8 +931,8 @@ void Read_Mute(unsigned char chn)
 		}
 		else
 		{
-			OUTdata.channel[chn].mute_press = 0;					// clear event flag
-			OUTdata.channel[chn].mute_release = 0;					// clear event flag
+//			OUTdata.channel[chn].mute_press = 0;					// clear event flag
+//			OUTdata.channel[chn].mute_release = 0;					// clear event flag
 		}
 	}
 
@@ -883,7 +979,7 @@ void LEDaction(void)
 		}
 		else
 		{
-			LED=LEDtoggle;
+	//		LED=LEDtoggle;
 		}
 	}
 	else

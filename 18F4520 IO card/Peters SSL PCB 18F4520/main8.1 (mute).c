@@ -18,7 +18,7 @@
 
 	v3.1
 		2014-10-14
-		Automan Efforts
+          		Automan Efforts
 	v6.2
 		Try to add more secure fail exits from communication loops
 
@@ -724,7 +724,7 @@ void Set_VCA(void){
 // 20 Dec 2016
 
 		localMute = testbit_on(LocalMuteBits,ch);
-		hostMute = INdata.channel[ch].mute;
+//		hostMute = INdata.channel[ch].mute;
 
 		if(localMute || hostMute)DACvalue=1023;
 
