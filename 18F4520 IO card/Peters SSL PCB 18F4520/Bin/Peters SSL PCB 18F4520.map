@@ -1,41 +1,45 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Mon Mar 20 17:17:42 2017
+Linker Map File - Created Sun Mar 26 18:18:13 2017
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x00000e
-   .code_main8.2 (mute).o       code   0x000014    program   0x0010c4
-               _cinit_scn       code   0x0010d8    program   0x00009e
-          .code_fxm3232.o       code   0x001176    program   0x000070
-          .code_adcopen.o       code   0x0011e6    program   0x00006e
-         .code_fxd3232u.o       code   0x001254    program   0x000048
-           .code_t0open.o       code   0x00129c    program   0x000038
-           .code_t2open.o       code   0x0012d4    program   0x000036
-                    .code       code   0x00130a    program   0x000020
-             _startup_scn       code   0x00132a    program   0x00001c
-          .code_adcconv.o       code   0x001346    program   0x000004
-           .code___init.o       code   0x00134a    program   0x000002
-        .romdata_t0open.o    romdata   0x00134c    program   0x000000
-        .idata_t0open.o_i    romdata   0x00134c    program   0x000000
-       .romdata_adcopen.o    romdata   0x00134c    program   0x000000
-        .romdata_t2open.o    romdata   0x00134c    program   0x000000
-        .idata_t2open.o_i    romdata   0x00134c    program   0x000000
-       .romdata_fxm3232.o    romdata   0x00134c    program   0x000000
-      .romdata_fxd3232u.o    romdata   0x00134c    program   0x000000
-       .romdata_adcconv.o    romdata   0x00134c    program   0x000000
-        .romdata___init.o    romdata   0x00134c    program   0x000000
-.romdata_main8.2 (mute).o    romdata   0x00134c    program   0x000000
-.idata_main8.2 (mute).o_i    romdata   0x00134c    program   0x000039
-         .romdata_c018i.o    romdata   0x00134c    program   0x000000
-        .idata___init.o_i    romdata   0x001385    program   0x000000
-       .idata_adcopen.o_i    romdata   0x001385    program   0x000000
-       .idata_fxm3232.o_i    romdata   0x001385    program   0x000000
-      .idata_fxd3232u.o_i    romdata   0x001385    program   0x000000
-       .idata_adcconv.o_i    romdata   0x001385    program   0x000000
-         .idata_c018i.o_i    romdata   0x001385    program   0x000000
-            .code_c018i.o       code   0x001386    program   0x000000
+   .code_main8.2 (mute).o       code   0x000014    program   0x00117c
+               _cinit_scn       code   0x001190    program   0x00009e
+          .code_fxm3232.o       code   0x00122e    program   0x000070
+          .code_adcopen.o       code   0x00129e    program   0x00006e
+                     PROG       code   0x00130c    program   0x00004c
+         .code_fxd3232u.o       code   0x001358    program   0x000048
+           .code_t0open.o       code   0x0013a0    program   0x000038
+           .code_t2open.o       code   0x0013d8    program   0x000036
+         .code_fxd1616u.o       code   0x00140e    program   0x00002c
+                    .code       code   0x00143a    program   0x000020
+             _startup_scn       code   0x00145a    program   0x00001c
+          .code_adcconv.o       code   0x001476    program   0x000004
+           .code___init.o       code   0x00147a    program   0x000002
+        .romdata_t2open.o    romdata   0x00147c    program   0x000000
+        .romdata___init.o    romdata   0x00147c    program   0x000000
+        .idata_t2open.o_i    romdata   0x00147c    program   0x000000
+        .romdata_t0open.o    romdata   0x00147c    program   0x000000
+        .idata_t0open.o_i    romdata   0x00147c    program   0x000000
+       .romdata_adcopen.o    romdata   0x00147c    program   0x000000
+       .romdata_fxm3232.o    romdata   0x00147c    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x00147c    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x00147c    program   0x000000
+       .romdata_adcconv.o    romdata   0x00147c    program   0x000000
+.romdata_main8.2 (mute).o    romdata   0x00147c    program   0x000000
+.idata_main8.2 (mute).o_i    romdata   0x00147c    program   0x000039
+         .romdata_c018i.o    romdata   0x00147c    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x0014b5    program   0x000000
+       .idata_adcopen.o_i    romdata   0x0014b5    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x0014b5    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x0014b5    program   0x000000
+       .idata_adcconv.o_i    romdata   0x0014b5    program   0x000000
+        .idata___init.o_i    romdata   0x0014b5    program   0x000000
+         .idata_c018i.o_i    romdata   0x0014b5    program   0x000000
+            .code_c018i.o       code   0x0014b6    program   0x000000
           volatile_access      udata   0x000000       data   0x000065
                 MATH_DATA      udata   0x000065       data   0x000010
                  .tmpdata      udata   0x000075       data   0x000006
@@ -55,6 +59,8 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
          .udata_fxm3232.o      udata   0x0001d9       data   0x000000
         .idata_fxd3232u.o      idata   0x0001d9       data   0x000000
         .udata_fxd3232u.o      udata   0x0001d9       data   0x000000
+        .idata_fxd1616u.o      idata   0x0001d9       data   0x000000
+        .udata_fxd1616u.o      udata   0x0001d9       data   0x000000
          .idata_adcconv.o      idata   0x0001d9       data   0x000000
          .udata_adcconv.o      udata   0x0001d9       data   0x000000
            .idata_c018i.o      idata   0x0001d9       data   0x000000
@@ -66,55 +72,65 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x001384      
-            4997 out of 33048 program addresses used, program memory utilization is 15%
+                            0x000000    0x0014b4      
+            5301 out of 33048 program addresses used, program memory utilization is 16%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-               ConvertADC   0x001346    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
-                 FXD3232U   0x001254    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                  FXM3232   0x001176    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+               ConvertADC   0x001476    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
+                   D1616S   0x00132e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x00133c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x001338    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x00134e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x00131e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD1616S   0x00130c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD1616U   0x00140e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXD3232U   0x001358    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                  FXM3232   0x00122e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
                      Init   0x000234    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                LEDaction   0x00104e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                  OpenADC   0x0011e6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
-               OpenTimer0   0x00129c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
-               OpenTimer2   0x0012d4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t2open.c
-                  PGtoVCA   0x000b42    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                Read_Mute   0x000f7e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-            Read_Switches   0x000a00    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                 Set_Leds   0x0008b6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                Set_Mutes   0x000812    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                LEDaction   0x001106    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  OpenADC   0x00129e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+               OpenTimer0   0x0013a0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
+               OpenTimer2   0x0013d8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t2open.c
+                  PGtoVCA   0x000bfa    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                Read_Mute   0x001036    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+            Read_Switches   0x000ab8    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 Set_Leds   0x00096e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                Set_Mutes   0x0008ca    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                   Set_VCA   0x000682    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                Start_ADC   0x000f7a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                  VCAtoPG   0x000d5e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                Start_ADC   0x001032    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  VCAtoPG   0x000e16    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
   YourHighPriorityISRCode   0x000014    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
    YourLowPriorityISRCode   0x00020e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-       ___return_lbl00000   0x00129a    program     static                          
-       ___return_lbl00000   0x0011e4    program     static                          
+       ___return_lbl00000   0x001438    program     static                          
+       ___return_lbl00000   0x00139e    program     static                          
+       ___return_lbl00000   0x00129c    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x001344    program     static                          
-       ___return_lbl00002   0x001174    program     static                          
-                   __init   0x00134a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x00130a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                _do_cinit   0x0010d8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+       ___return_lbl00001   0x001474    program     static                          
+       ___return_lbl00002   0x00122c    program     static                          
+                   __init   0x00147a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+            __zero_memory   0x00143a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                _do_cinit   0x001190    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                   _false   0x001296    program     static                          
-                 _startup   0x00132a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x001320    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                copy_loop   0x00114a    program     static                          
-            copy_one_byte   0x001150    program     static                          
-                     done   0x001174    program     static                          
-             done_copying   0x00115e    program     static                          
-                     loop   0x00133a    program     static                          
-                     loop   0x001262    program     static                          
-                   loop_h   0x001318    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_l   0x001322    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   _false   0x00139a    program     static                          
+                 _startup   0x00145a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x001450    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                copy_loop   0x001202    program     static                          
+            copy_one_byte   0x001208    program     static                          
+                     done   0x00122c    program     static                          
+             done_copying   0x001216    program     static                          
+                  endloop   0x001434    program     static                          
+                     loop   0x001366    program     static                          
+                     loop   0x001418    program     static                          
+                     loop   0x00146a    program     static                          
+                   loop_h   0x001448    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x001452    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                      main   0x00031a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                     test   0x0010f2    program     static                          
-               zero_block   0x001318    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     test   0x0011aa    program     static                          
+               zero_block   0x001448    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADCON0   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                ADCON0bits   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADCON1   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -280,7 +296,7 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                     RCREG   0x000fae       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                     RCSTA   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                 RCSTAbits   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                     SIGN   0x000073       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                     SIGN   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                     SPBRG   0x000faf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    SPBRGH   0x000fb0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    SSPADD   0x000fc8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -354,26 +370,26 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                     WRITE   0x0001b3       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                      Wcnt   0x000169       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
            WriteToDACflag   0x0001bc       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                 __AARGB0   0x00006c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB1   0x00006b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB2   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB3   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB4   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB5   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB6   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB7   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                   __AEXP   0x00006d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __BARGB0   0x000071       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB1   0x000070       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB2   0x00006f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB3   0x00006e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                   __BEXP   0x000072       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                __FPFLAGS   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-            __FPFLAGSbits   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                  __REMB0   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB1   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB2   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB3   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB0   0x00006e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB1   0x00006d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB2   0x00006c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB3   0x00006b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB4   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB7   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __AEXP   0x00006f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __BARGB0   0x000073       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB1   0x000072       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB2   0x000071       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB3   0x000070       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                   __BEXP   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                __FPFLAGS   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                  __REMB0   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB2   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB3   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __tmp_0   0x000075       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
                   __tmp_0   0x000075       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                   __tmp_1   0x00007b       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
@@ -440,40 +456,50 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
                      Init   0x000234    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                      main   0x00031a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                   Set_VCA   0x000682    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                Set_Mutes   0x000812    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                 Set_Leds   0x0008b6    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-            Read_Switches   0x000a00    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                  PGtoVCA   0x000b42    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                  VCAtoPG   0x000d5e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                Start_ADC   0x000f7a    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                Read_Mute   0x000f7e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                LEDaction   0x00104e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                _do_cinit   0x0010d8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x0010f2    program     static                          
-                copy_loop   0x00114a    program     static                          
-            copy_one_byte   0x001150    program     static                          
-             done_copying   0x00115e    program     static                          
-       ___return_lbl00002   0x001174    program     static                          
-                     done   0x001174    program     static                          
-                  FXM3232   0x001176    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
-       ___return_lbl00000   0x0011e4    program     static                          
-                  OpenADC   0x0011e6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
-                 FXD3232U   0x001254    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
-                     loop   0x001262    program     static                          
-                   _false   0x001296    program     static                          
-       ___return_lbl00000   0x00129a    program     static                          
-               OpenTimer0   0x00129c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
-               OpenTimer2   0x0012d4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t2open.c
-            __zero_memory   0x00130a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_h   0x001318    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-               zero_block   0x001318    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                compare_l   0x001320    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_l   0x001322    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                 _startup   0x00132a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x00133a    program     static                          
-       ___return_lbl00001   0x001344    program     static                          
-               ConvertADC   0x001346    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
-                   __init   0x00134a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                Set_Mutes   0x0008ca    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                 Set_Leds   0x00096e    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+            Read_Switches   0x000ab8    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  PGtoVCA   0x000bfa    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                  VCAtoPG   0x000e16    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                Start_ADC   0x001032    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                Read_Mute   0x001036    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                LEDaction   0x001106    program     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
+                _do_cinit   0x001190    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x0011aa    program     static                          
+                copy_loop   0x001202    program     static                          
+            copy_one_byte   0x001208    program     static                          
+             done_copying   0x001216    program     static                          
+                     done   0x00122c    program     static                          
+       ___return_lbl00002   0x00122c    program     static                          
+                  FXM3232   0x00122e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x00129c    program     static                          
+                  OpenADC   0x00129e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
+                 FXD1616S   0x00130c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x00131e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D1616S   0x00132e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x001338    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x00133c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x00134e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD3232U   0x001358    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                     loop   0x001366    program     static                          
+                   _false   0x00139a    program     static                          
+       ___return_lbl00000   0x00139e    program     static                          
+               OpenTimer0   0x0013a0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t0open.c
+               OpenTimer2   0x0013d8    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\Timers\t2open.c
+                 FXD1616U   0x00140e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x001418    program     static                          
+                  endloop   0x001434    program     static                          
+       ___return_lbl00000   0x001438    program     static                          
+            __zero_memory   0x00143a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_h   0x001448    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               zero_block   0x001448    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                compare_l   0x001450    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x001452    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 _startup   0x00145a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x00146a    program     static                          
+       ___return_lbl00001   0x001474    program     static                          
+               ConvertADC   0x001476    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcconv.c
+                   __init   0x00147a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                 shiftData   0x000000       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                    INdata   0x000003       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                  INbuffer   0x000013       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
@@ -483,27 +509,27 @@ YourHighPriorityISRCode_tmp      udata   0x00007b       data   0x000004
               DACsetPoint   0x000053       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
              cueTableCntr   0x000063       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
              cueTableFlag   0x000064       data     extern C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
-                 __AARGB7   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB3   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB6   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB2   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB5   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB1   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB0   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB4   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB3   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB2   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB1   0x00006b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB0   0x00006c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                   __AEXP   0x00006d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __BARGB3   0x00006e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB2   0x00006f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB1   0x000070       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB0   0x000071       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                   __BEXP   0x000072       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                     SIGN   0x000073       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                __FPFLAGS   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-            __FPFLAGSbits   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                     SIGN   0x000065       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                __FPFLAGS   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000066       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                 __AARGB7   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB3   0x000067       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB2   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x000068       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x000069       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB4   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB0   0x00006a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB3   0x00006b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB2   0x00006c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB1   0x00006d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB0   0x00006e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __AEXP   0x00006f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __BARGB3   0x000070       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB2   0x000071       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB1   0x000072       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB0   0x000073       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                   __BEXP   0x000074       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
                   __tmp_0   0x000075       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c
                   __tmp_0   0x000075       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\pmc_common\ADC\adcopen.c
                   __tmp_1   0x00007b       data     static C:\Users\KBV\Desktop\Docus\Automan\Automation Project\Firmware\18F4520 IO card\Peters SSL PCB 18F4520\main8.2 (mute).c

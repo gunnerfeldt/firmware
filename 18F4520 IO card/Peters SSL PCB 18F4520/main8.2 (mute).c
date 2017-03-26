@@ -704,7 +704,7 @@ void Set_VCA(void){
 	unsigned int n = 0;
 	unsigned int word;
 	unsigned int addr;
-	unsigned int DACvalue;
+	int DACvalue;
 	unsigned char ch,localMute,hostMute;
 
 //	DACvalue = ((VCAout[ch]+(VCAoutOld[ch]))/2);	// VCA data from computer
@@ -719,7 +719,10 @@ void Set_VCA(void){
 		if(VCAout[ch]<0)VCAout[ch]=0;
 */
 
-		DACvalue = VCAout[ch];
+		DACvalue = ((VCAout[ch]) + (DACdelta[ch]*7)) / 8;
+		if(DACvalue>1023)DACvalue=1023;
+		if(DACvalue<0)DACvalue=0;
+		DACdelta[ch] = DACvalue;
 
 // 20 Dec 2016
 
